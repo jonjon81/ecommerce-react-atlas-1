@@ -11,7 +11,7 @@ const Contact = () => {
             provident adipisci cumque eveniet tempore?
           </p>
           <form action="https://formspree.io/f/xknlpwby" method="post" className="contact-form">
-            <input name="Email" id="email" type="email" className="form-input" placeholder="enter email" />
+            <input required name="Email" id="email" type="email" className="form-input" placeholder="enter email" />
             <button type="submit" className="submit-btn">
               subscribe
             </button>
