@@ -5,9 +5,9 @@ const Footer = () => {
     <Container>
       <h5>
         &copy; {new Date().getFullYear()}
-        <span> Atlas eCommerce React </span>
+        <span>&nbsp;Atlas eCommerce React </span>
       </h5>
-      <h5>All rights reserved</h5>
+      <h5>&nbsp;All rights reserved</h5>
     </Container>
   );
 };
@@ -21,7 +21,7 @@ const Container = styled.footer`
   background: var(--clr-black);
   text-align: center;
   span {
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-8);
   }
   h5 {
     color: var(--clr-white);
