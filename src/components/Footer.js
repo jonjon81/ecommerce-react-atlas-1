@@ -5,7 +5,7 @@ const Footer = () => {
     <Container>
       <h5>
         &copy; {new Date().getFullYear()}
-        <span>&nbsp;Atlas eCommerce React </span>
+        <span>&nbsp;Atlas Electronics</span>
       </h5>
       <h5>&nbsp;All rights reserved</h5>
     </Container>
