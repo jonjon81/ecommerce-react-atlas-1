@@ -6,10 +6,10 @@ const ListView = ({ products }) => {
   return (
     <Wrapper>
       {products.map((product) => {
-        const { id, image, name, price, description } = product;
+        const { id, thumbnail, name, price, description } = product;
         return (
           <article key={id}>
-            <img src={image} alt={name} />
+            <img src={thumbnail} alt={name} />
             <div>
               <h4>{name}</h4>
               <h5 className="price">{formatPrice(price)}</h5>
@@ -51,7 +51,7 @@ const Wrapper = styled.section`
   }
   .btn {
     font-size: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem;
   }
   @media (min-width: 992px) {
     article {
