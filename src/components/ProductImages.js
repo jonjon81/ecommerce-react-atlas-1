@@ -12,7 +12,7 @@ const ProductImages = ({ images = [[]] }) => {
               src={image}
               alt=""
               key={index}
-              className={`${image.url === main.url ? 'active' : null}`}
+              className={`${image === main ? 'active' : null}`}
               onClick={() => setMain(images[index])}
             />
           );
@@ -30,7 +30,7 @@ const Wrapper = styled.section`
     width: 100%;
     display: block;
     border-radius: var(--radius);
-    object-fit: cover;
+    object-fit: contain;
   }
   .gallery {
     margin-top: 1rem;
@@ -40,11 +40,14 @@ const Wrapper = styled.section`
     img {
       height: 100px;
       cursor: pointer;
+      border-radius: 5%;
+      border: 4px solid transparent;
+      &.active {
+        border: 4px solid var(--clr-primary-5);
+      }
     }
   }
-  .active {
-    border: 2px solid var(--clr-primary-5);
-  }
+
   @media (max-width: 576px) {
     .main {
       height: 300px;

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
 import { formatPrice } from '../utils/helpers';
-import { Loading, Error, ProductImages, Rating, PageHero } from '../components';
+import { Loading, Error, ProductImages, Rating, PageHero, AddToCart } from '../components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 const SingleProductPage = () => {
@@ -63,7 +63,7 @@ const SingleProductPage = () => {
               {brand}
             </p>
             <hr />
-            {/* {stock > 0 && <AddToCart product={product} />} */}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>

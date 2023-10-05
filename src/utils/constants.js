@@ -39,6 +39,6 @@ export const services = [
   },
 ];
 
-export const products_url = 'https://dummyjson.com/products?limit=50';
+export const products_url = 'https://dummyjson.com/products?limit=100';
 
 export const single_product_url = `https://dummyjson.com/products`;

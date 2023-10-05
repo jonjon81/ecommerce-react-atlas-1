@@ -32,7 +32,7 @@ const Filters = () => {
           </div>
           {/* end of search input */}
           {/* category */}
-          <div className="form-control">
+          <div className="form-control -category">
             <h5>category</h5>
             <div>
               {categories.map((c, index) => {
@@ -52,7 +52,7 @@ const Filters = () => {
           </div>
           {/* end of category */}
           {/* brand */}
-          <div className="form-control">
+          <div className="form-control -brand">
             <h5>brand</h5>
             <select name="brand" value={brand} onChange={updateFilters} className="brand">
               {companies.map((c, index) => {
@@ -65,40 +65,6 @@ const Filters = () => {
             </select>
           </div>
           {/* end of brand */}
-          {/* colors */}
-          <div className="form-control">
-            <h5>colors</h5>
-            <div className="colors">
-              {colors.map((c, index) => {
-                if (c === 'all') {
-                  return (
-                    <button
-                      key={index}
-                      name="color"
-                      onClick={updateFilters}
-                      data-color="all"
-                      className={`${color === 'all' ? 'all-btn active' : 'all-btn'}`}
-                    >
-                      all
-                    </button>
-                  );
-                }
-                return (
-                  <button
-                    key={index}
-                    name="color"
-                    style={{ background: c }}
-                    className={`${color === c ? 'color-btn active' : 'color-btn'}`}
-                    data-color={c}
-                    onClick={updateFilters}
-                  >
-                    {color === c ? <FaCheck /> : null}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-          {/* end of colors */}
           {/* price */}
           <div className="form-control">
             <h5>price</h5>
@@ -106,12 +72,6 @@ const Filters = () => {
             <input type="range" name="price" onChange={updateFilters} min={min_price} max={max_price} value={price} />
           </div>
           {/* end of price */}
-          {/* shipping */}
-          <div className="form-control shipping">
-            <label htmlFor="shipping">free shipping</label>
-            <input type="checkbox" name="shipping" id="shipping" checked={shipping} onChange={updateFilters} />
-          </div>
-          {/* end of  shipping */}
         </form>
         <button type="button" className="clear-btn" onClick={clearFilters}>
           clear filters
@@ -126,6 +86,14 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     h5 {
       margin-bottom: 0.5rem;
+    }
+    &.-category {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+
+    &.-brand * {
+      max-width: 100%;
     }
   }
   .search-input {
@@ -209,7 +177,7 @@ const Wrapper = styled.section`
   .clear-btn {
     background: var(--clr-red-dark);
     color: var(--clr-white);
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem;
     border-radius: var(--radius);
   }
   @media (min-width: 768px) {
