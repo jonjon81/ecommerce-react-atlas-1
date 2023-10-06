@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollButton from './ScrollButton';
 const Footer = () => {
   return (
     <Container>
@@ -8,6 +9,7 @@ const Footer = () => {
         <span>&nbsp;Atlas Electronics</span>
       </h5>
       <h5>&nbsp;All rights reserved</h5>
+      <ScrollButton />
     </Container>
   );
 };
