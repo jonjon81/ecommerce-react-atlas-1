@@ -184,6 +184,22 @@ const Wrapper = styled.section`
       top: 1rem;
     }
   }
+  @media (max-width: 767px) {
+    .content {
+      border: 1px solid;
+      height: 40px;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100000;
+      background: rgb(255, 255, 255);
+      padding: 10px;
+      transition: all 0.3s ease 0s;
+      left: 0;
+      // height: 100%;
+    }
+  }
 `;
 
 export default Filters;
