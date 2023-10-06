@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   position: fixed;
   width: auto;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   bottom: 100px;
   height: 20px;
   font-size: 3rem;

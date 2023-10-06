@@ -59,7 +59,7 @@ const Wrapper = styled.article`
     gap: 1rem;
   }
   img {
-    width: 100px;
+    width: 75px;
     height: 75px;
     display: block;
     border-radius: var(--radius);
@@ -167,6 +167,9 @@ const Wrapper = styled.article`
       align-items: center;
       gap: 1rem;
       text-align: left;
+    }
+    img {
+      width: 100%;
     }
     .amount-btns {
       width: 100px;
