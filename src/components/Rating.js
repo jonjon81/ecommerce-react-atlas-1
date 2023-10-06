@@ -9,7 +9,7 @@ const Rating = ({ rating, reviews }) => {
   return (
     <Wrapper>
       <div className="stars">{tempStars}</div>
-      <p className="reviews">({reviews} customer reviews)</p>
+      <p className="reviews">({rating} customer rating)</p>
     </Wrapper>
   );
 };
