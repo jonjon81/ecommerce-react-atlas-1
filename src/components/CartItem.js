@@ -4,6 +4,7 @@ import { formatPrice } from '../utils/helpers';
 import AmountButtons from './AmountButtons';
 import { FaTrash } from 'react-icons/fa';
 import { useCartContext } from '../context/cart_context';
+import { Link } from 'react-router-dom';
 const CartItem = ({ id, image, name, price, amount }) => {
   const { removeItem, toggleAmount } = useCartContext();
   const increase = () => {
@@ -15,9 +16,13 @@ const CartItem = ({ id, image, name, price, amount }) => {
   return (
     <Wrapper>
       <div className="title">
-        <img src={image} alt={name} />
+        <Link to={`/products/${id}`}>
+          <img className="image" src={image} alt={name} />
+        </Link>
         <div>
-          <h5 className="name">{name}</h5>
+          <Link to={`/products/${id}`}>
+            <h5 className="name">{name}</h5>
+          </Link>
           <h5 className="price-small">{formatPrice(price)}</h5>
         </div>
       </div>
@@ -54,11 +59,17 @@ const Wrapper = styled.article`
     gap: 1rem;
   }
   img {
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 75px;
     display: block;
     border-radius: var(--radius);
     object-fit: cover;
+  }
+  .image {
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid var(--clr-primary-5);
+    }
   }
   h5 {
     font-size: 0.75rem;
@@ -131,6 +142,10 @@ const Wrapper = styled.article`
     }
     .name {
       font-size: 0.85rem;
+      color: #000;
+      &:hover {
+        color: var(--clr-primary-5);
+      }
     }
     .color {
       font-size: 0.85rem;
@@ -143,7 +158,7 @@ const Wrapper = styled.article`
     align-items: center;
     grid-template-rows: 75px;
     img {
-      height: 100%;
+      height: 75px;
     }
     .title {
       height: 100%;
