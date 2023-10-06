@@ -34,25 +34,11 @@ const filter_reducer = (state, action) => {
     let tempProducts = [];
     if (sort === 'price-lowest') {
       tempProducts = filtered_products.sort((a, b) => {
-        // if (a.price < b.price) {
-        //   return -1
-        // }
-        // if (a.price > b.price) {
-        //   return 1
-        // }
-        // return 0
         return a.price - b.price;
       });
     }
     if (sort === 'price-highest') {
       tempProducts = filtered_products.sort((a, b) => {
-        // if (b.price < a.price) {
-        //   return -1
-        // }
-        // if (b.price > a.price) {
-        //   return 1
-        // }
-        // return 0
         return b.price - a.price;
       });
     }
@@ -75,21 +61,16 @@ const filter_reducer = (state, action) => {
   }
   if (action.type === FILTER_PRODUCTS) {
     const { all_products } = state;
-    const { text, category, brand, color, price, shipping } = state.filters;
+    const { text, category, brand, price, shipping } = state.filters;
     let tempProducts = [...all_products];
     if (text) {
-      tempProducts = tempProducts.filter((product) => product.title.toLowerCase().startsWith(text));
+      tempProducts = tempProducts.filter((product) => product.title.toLowerCase().includes(text));
     }
     if (category !== 'all') {
       tempProducts = tempProducts.filter((product) => product.category === category);
     }
     if (brand !== 'all') {
       tempProducts = tempProducts.filter((product) => product.brand === brand);
-    }
-    if (color !== 'all') {
-      tempProducts = tempProducts.filter((product) => {
-        return product.colors.find((c) => c === color);
-      });
     }
     // filter by price
     tempProducts = tempProducts.filter((product) => product.price <= price);
@@ -107,7 +88,6 @@ const filter_reducer = (state, action) => {
         text: '',
         brand: 'all',
         category: 'all',
-        color: 'all',
         price: state.filters.max_price,
         shipping: false,
       },
