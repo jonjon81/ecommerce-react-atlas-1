@@ -1,10 +1,10 @@
 import React from 'react';
 import { useProductsContext } from '../context/products_context';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
 import Category from './Category';
+import Hidden from './Hidden';
 const CategoryProducts = () => {
   const { products_loading: loading, products_error: error, featured_products: category } = useProductsContext();
   if (loading) {
@@ -18,12 +18,13 @@ const CategoryProducts = () => {
   return (
     <Wrapper className="section">
       <div className="title">
-        <h2>Shop early Power Up Sale deals by category</h2>
+        <h2>Shop by category</h2>
         <div className="underline"></div>
       </div>
       <div className="section-center category">
         {category.map((product) => {
           if (categoryList.includes(product.category)) {
+            return <Hidden key={product.id} />;
           } else {
             categoryList.push(product.category);
             return <Category key={product.id} {...product} />;

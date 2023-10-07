@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-const Category = ({ thumbnail, title, id, category }) => {
+
+const Category = ({ thumbnail, title, category }) => {
   return (
     <Wrapper>
       <div className="container">
         <img src={thumbnail} alt={title} />
-        <Link to={`/products/${id}`} className="link">
+        <Link to={`/products/category/${category}`} className="link">
           <FaSearch />
         </Link>
       </div>

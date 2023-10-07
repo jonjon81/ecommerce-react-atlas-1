@@ -1,7 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar, Footer } from './components';
-import { Home, SingleProduct, Cart, Checkout, Error, About, Products, PrivateRoute, AuthWrapper } from './pages';
+import {
+  Home,
+  SingleProduct,
+  CategoryPage,
+  Cart,
+  Checkout,
+  Error,
+  About,
+  Products,
+  PrivateRoute,
+  AuthWrapper,
+} from './pages';
 function App() {
   return (
     <AuthWrapper>
@@ -12,6 +23,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="products/category/:category" element={<CategoryPage />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:id" element={<SingleProduct />} />
           <Route
