@@ -1,4 +1,5 @@
 import FeaturedProducts from './FeaturedProducts';
+import CategoryProducts from './CategoryProducts';
 import Navbar from './Navbar';
 import CartButtons from './CartButtons';
 import ScrollButton from './ScrollButton';
@@ -20,6 +21,7 @@ import PageHero from './PageHero';
 import StripeCheckout from './StripeCheckout';
 export {
   FeaturedProducts,
+  CategoryProducts,
   Navbar,
   CartButtons,
   ScrollButton,
