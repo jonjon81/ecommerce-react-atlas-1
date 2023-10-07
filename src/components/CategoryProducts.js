@@ -13,14 +13,7 @@ const CategoryProducts = () => {
   if (error) {
     return <Error />;
   }
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    arrows: true,
-  };
+  const categoryList = [];
 
   return (
     <Wrapper className="section">
@@ -28,12 +21,13 @@ const CategoryProducts = () => {
         <h2>Shop early Power Up Sale deals by category</h2>
         <div className="underline"></div>
       </div>
-
-      {console.dir(category)}
-
       <div className="section-center category">
         {category.map((product) => {
-          return <Category key={product.id} {...product} />;
+          if (categoryList.includes(product.category)) {
+          } else {
+            categoryList.push(product.category);
+            return <Category key={product.id} {...product} />;
+          }
         })}
       </div>
     </Wrapper>

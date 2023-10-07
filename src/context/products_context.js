@@ -43,8 +43,6 @@ export const ProductsProvider = ({ children }) => {
       const response = await axios.get(url);
       const productsSub = response.data;
       products.push(...productsSub.products);
-      console.log('products---');
-      console.dir(products);
       dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
     } catch (error) {
       dispatch({ type: GET_PRODUCTS_ERROR });

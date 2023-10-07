@@ -36,7 +36,6 @@ const FeaturedProducts = () => {
       <div className="section-center featured">
         <Slider {...settings}>
           {featured.slice(0, 15).map((product) => {
-            console.dir(product.category);
             return <Product key={product.id} {...product} />;
           })}
         </Slider>
