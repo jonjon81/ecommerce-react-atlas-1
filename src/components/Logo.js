@@ -2,7 +2,7 @@ import styled from 'styled-components';
 const Logo = () => {
   return (
     <Wrapper>
-      <span>Atlas</span>Electronics
+      <span>Atlas</span>Ecommerce
     </Wrapper>
   );
 };

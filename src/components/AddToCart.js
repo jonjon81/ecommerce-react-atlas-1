@@ -60,8 +60,6 @@ const AddToCart = ({ product }) => {
   );
 };
 
-console.log('AddToCart');
-console.dir(AddToCart);
 const Wrapper = styled.section`
   margin-top: 2rem;
   .colors {

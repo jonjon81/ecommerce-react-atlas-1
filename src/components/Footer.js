@@ -6,7 +6,7 @@ const Footer = () => {
     <Container>
       <h5>
         &copy; {new Date().getFullYear()}
-        <span>&nbsp;Atlas Electronics</span>
+        <span>&nbsp;Atlas Ecommerce</span>
       </h5>
       <h5>&nbsp;All rights reserved</h5>
       <ScrollButton />
