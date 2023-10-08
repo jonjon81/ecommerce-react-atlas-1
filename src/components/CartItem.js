@@ -63,7 +63,7 @@ const Wrapper = styled.article`
     height: 75px;
     display: block;
     border-radius: var(--radius);
-    object-fit: cover;
+    object-fit: contain;
   }
   .image {
     border: 2px solid transparent;

@@ -35,7 +35,7 @@ const FeaturedProducts = () => {
 
       <div className="section-center featured">
         <Slider {...settings}>
-          {featured.slice(0, 15).map((product) => {
+          {featured.slice(0, 20).map((product) => {
             return <Product key={product.id} {...product} />;
           })}
         </Slider>
@@ -62,6 +62,18 @@ const Wrapper = styled.section`
     }
     .slick-dots {
       bottom: -40px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: var(--clr-primary-5);
+      font-size: 30px;
+    }
+    .slick-next {
+      right: -50px;
+    }
+    .slick-prev {
+      left: -50px;
     }
     footer {
       padding: 0 10px;

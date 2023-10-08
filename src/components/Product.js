@@ -22,13 +22,13 @@ const Product = ({ thumbnail, title, price, id, category }) => {
 const Wrapper = styled.article`
   .container {
     position: relative;
-    background: var(--clr-black);
+    background: none;
     border-radius: var(--radius);
   }
   img {
     width: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: var(--radius);
     transition: var(--transition);
   }
@@ -63,6 +63,7 @@ const Wrapper = styled.article`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
   }
   footer h5,
   footer p {

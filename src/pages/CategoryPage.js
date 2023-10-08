@@ -7,17 +7,14 @@ import Product from '../components/Product';
 import Hidden from '../components/Hidden';
 
 const CategoryPage = () => {
-  const { filtered_products: products } = useFilterContext();
+  const { all_products: products } = useFilterContext();
   const { category } = useParams();
   return (
     <main>
       <PageHero title={category} product />
       <Wrapper className="page">
         <div className="section-center products">
-          <div className="column-filter-row">
-            <div>5 items found</div>
-            <Sort />
-          </div>
+          <div className="column-filter-row"></div>
           <div className="category-container">
             {products.map((product) => {
               if (product.category === category) {
@@ -57,8 +54,12 @@ const Wrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem 1.5rem;
     padding-bottom: 80px;
+    .container {
+      background: none;
+    }
     img {
-      height: 300px;
+      height: 250px;
+      object-fit: contain;
     }
   }
   @media (min-width: 768px) {
