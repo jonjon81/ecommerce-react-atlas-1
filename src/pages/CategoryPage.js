@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { Sort, PageHero } from '../components';
+import { PageHero } from '../components';
 import { useFilterContext } from '../context/filter_context';
 import Product from '../components/Product';
 import Hidden from '../components/Hidden';
