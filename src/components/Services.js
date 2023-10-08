@@ -7,7 +7,7 @@ const Services = () => {
       <div className="section-center">
         <article className="header">
           <h3>
-            The best electronics <br /> ready for you
+            The best products <br /> ready for you
           </h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolorum debitis consectetur reprehenderit non

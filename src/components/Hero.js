@@ -9,7 +9,7 @@ const Hero = () => {
       <article className="content">
         <h1>
           Get your <br />
-          electronics now
+          products now
         </h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque possimus

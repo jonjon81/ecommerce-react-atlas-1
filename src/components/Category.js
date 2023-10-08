@@ -8,12 +8,14 @@ const Category = ({ thumbnail, title, category }) => {
     <Wrapper>
       <div className="container">
         <img src={thumbnail} alt={title} />
-        <Link to={`/products/category/${category}`} className="link">
+        <Link to={`/products/${category}`} className="link">
           <FaSearch />
         </Link>
       </div>
       <footer>
-        <h5>{category}</h5>
+        <Link to={`/products/${category}`}>
+          <h5>{category}</h5>
+        </Link>
       </footer>
     </Wrapper>
   );
@@ -21,13 +23,13 @@ const Category = ({ thumbnail, title, category }) => {
 const Wrapper = styled.article`
   .container {
     position: relative;
-    background: var(--clr-black);
+    background: none;
     border-radius: var(--radius);
   }
   img {
     width: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: var(--radius);
     transition: var(--transition);
   }
@@ -66,12 +68,19 @@ const Wrapper = styled.article`
   footer h5,
   footer p {
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: bold;
   }
 
   footer p {
     color: var(--clr-primary-5);
     letter-spacing: var(--spacing);
+  }
+
+  footer a {
+    color: var(--clr-primary-5);
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 export default Category;

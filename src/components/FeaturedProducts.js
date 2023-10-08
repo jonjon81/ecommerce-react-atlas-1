@@ -53,6 +53,29 @@ const Wrapper = styled.section`
     margin: 4rem auto;
     display: grid;
     gap: 2.5rem;
+    .slick-dots li button:before {
+      font-size: 16px;
+    }
+    .container {
+      padding: 10px;
+      background: transparent;
+    }
+    .slick-dots {
+      bottom: -40px;
+    }
+    footer {
+      padding: 0 10px;
+      flex-direction: column;
+      h5 {
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
     img {
       height: 225px;
     }

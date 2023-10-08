@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Sort = () => {
   const { filtered_products: products, grid_view, setGridView, setListView, sort, updateSort } = useFilterContext();
   return (
-    <Wrapper>
+    <Wrapper className="sort-section">
       <div className="btn-container">
         <button onClick={setGridView} className={`${grid_view ? 'active' : null}`}>
           <BsFillGridFill />
@@ -14,7 +14,7 @@ const Sort = () => {
           <BsList />
         </button>
       </div>
-      <p>{products.length} products found</p>
+      <p className="products-found">{products.length} products found</p>
       <hr />
       <form>
         <label htmlFor="sort">sort by</label>

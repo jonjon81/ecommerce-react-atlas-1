@@ -35,10 +35,10 @@ const SingleProductPage = () => {
     return <Error />;
   }
 
-  const { title, price, description, stock, rating, reviews, id: sku, brand, images } = product;
+  const { category, title, price, description, stock, rating, reviews, id: sku, brand, images } = product;
   return (
     <Wrapper>
-      <PageHero title={title} product />
+      <PageHero title={title} category={category} product />
       <div className="section section-center page">
         <Link to="/products" className="btn">
           back to products
