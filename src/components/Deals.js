@@ -29,26 +29,29 @@ const Deals = () => {
   return (
     <Wrapper className="section">
       <div className="title">
-        <h2>Our top deals</h2>
+        <h2>Our top deals of 15%+ off</h2>
         <div className="underline"></div>
       </div>
 
       <div className="section-center featured">
         <Slider {...settings}>
-          {featured.slice(0, 10).map((product) => {
-            return <Deal key={product.id} {...product} />;
+          {featured.map((product) => {
+            if (product.discountPercentage > 15) {
+              console.log(product.discountPercentage);
+              return <Deal key={product.id} {...product} />;
+            }
           })}
         </Slider>
       </div>
-      <Link to="/products" className="btn">
-        all products
-      </Link>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  background: #fff;
+  background: #131921;
+  h2 {
+    color: #fff;
+  }
   .featured {
     margin: 4rem auto;
     display: grid;
@@ -62,11 +65,16 @@ const Wrapper = styled.section`
     }
     .slick-dots {
       bottom: -40px;
+      li {
+        button:before {
+          color: #fff;
+        }
+      }
     }
 
     .slick-prev:before,
     .slick-next:before {
-      color: var(--clr-primary-5);
+      color: var(--clr-primary-10);
       font-size: 30px;
     }
     .slick-next {

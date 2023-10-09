@@ -70,6 +70,9 @@ const Wrapper = styled.article`
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    * {
+      color: #fff;
+    }
   }
   footer h5,
   footer p {
@@ -78,7 +81,7 @@ const Wrapper = styled.article`
   }
 
   footer p {
-    color: var(--clr-primary-5);
+    color: #fff;
     letter-spacing: var(--spacing);
   }
 `;
