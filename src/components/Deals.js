@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
-import Product from './Product';
+import Deal from './Deal';
 const Deals = () => {
   const { products_loading: loading, products_error: error, featured_products: featured } = useProductsContext();
   if (loading) {
@@ -29,19 +29,19 @@ const Deals = () => {
   return (
     <Wrapper className="section">
       <div className="title">
-        <h2>Current Deals yes!</h2>
+        <h2>Our top deals</h2>
         <div className="underline"></div>
       </div>
 
       <div className="section-center featured">
         <Slider {...settings}>
-          {featured.map((product) => {
-            return <Product key={product.id} {...product} />;
+          {featured.slice(0, 10).map((product) => {
+            return <Deal key={product.id} {...product} />;
           })}
         </Slider>
       </div>
       <Link to="/products" className="btn">
-        all deals
+        all products
       </Link>
     </Wrapper>
   );
