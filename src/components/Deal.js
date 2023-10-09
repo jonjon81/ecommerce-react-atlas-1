@@ -14,9 +14,9 @@ const Deal = ({ thumbnail, title, price, id, category, discountPercentage }) => 
       </div>
       <footer>
         <h5>{title}</h5>
-        <h6>DEAL</h6>
-        <h6>{discountPercentage}</h6>
+        <h4>{discountPercentage}% off</h4>
         <p>{formatPrice(price)}</p>
+        <p> NEW PRICE</p>
       </footer>
     </Wrapper>
   );
@@ -72,6 +72,9 @@ const Wrapper = styled.article`
     flex-direction: column;
     * {
       color: #fff;
+    }
+    h4 {
+      background: var(--clr-red-dark);
     }
   }
   footer h5,
