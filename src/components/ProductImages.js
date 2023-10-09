@@ -13,9 +13,18 @@ const ProductImages = ({ images = [[]] }) => {
     setIsActive(false);
     modalBg.classList.remove('active');
   };
+  modalBg.addEventListener(
+    'click',
+    function (event) {
+      event.preventDefault();
+      closeActiveModal();
+    },
+    false
+  );
 
   return (
     <Wrapper className={isActive ? 'image-modal' : ''}>
+      <div className="modal-background"></div>
       <FaWindowClose className="close-image-modal" onClick={closeActiveModal} />
       <img src={main} alt="" className="main" onClick={imageModalActive} />
       <div className="gallery">
@@ -37,14 +46,15 @@ const ProductImages = ({ images = [[]] }) => {
 
 const Wrapper = styled.section`
   &.image-modal {
+    max-width: 1220px;
     position: fixed;
     height: 90vh;
     width: 90vw;
     background: rgb(255, 255, 255);
-    left: 5vw;
-    top: 5vh;
+    top: 50%;
     padding: 4rem;
     border-radius: 12px;
+    transform: translate(0, -50%);
     .close-image-modal {
       display: flex;
       position: absolute;
