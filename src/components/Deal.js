@@ -75,6 +75,7 @@ const Wrapper = styled.article`
     }
     h4 {
       background: var(--clr-red-dark);
+      padding: 5px;
     }
   }
   footer h5,
