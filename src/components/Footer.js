@@ -7,33 +7,33 @@ const Footer = () => {
       <div className="footer-container">
         <ul>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
           <li>
             <a href="/test">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum dolor</a>
+            <a href="/test">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
           <li>
             <a href="/test">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum dolor</a>
+            <a href="/test">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum dolor</a>
+            <a href="/test">Lorem ipsum dolor</a>
           </li>
           <li>
             <a href="/test">lorem</a>
@@ -41,33 +41,33 @@ const Footer = () => {
         </ul>
         <ul>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
           <li>
             <a href="/test">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum dolor</a>
+            <a href="/test">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/test">Lorem, ipsum</a>
+            <a href="/test">Lorem ipsum</a>
           </li>
           <li>
             <a href="/test">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum dolor</a>
+            <a href="/test">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem, ipsum dolor</a>
+            <a href="/test">Lorem ipsum dolor</a>
           </li>
           <li>
             <a href="/test">lorem</a>
