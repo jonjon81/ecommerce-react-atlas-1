@@ -10,6 +10,7 @@ import main from '../assets/categories/main.jpeg';
 import sunglasses from '../assets/categories/sunglasses.jpg';
 import furniture from '../assets/categories/furniture.jpg';
 import watches from '../assets/categories/watches.jpg';
+import motorcycle from '../assets/categories/motorcycle.jpg';
 
 const Hero = () => {
   var settings = {
@@ -94,10 +95,29 @@ const Hero = () => {
                 quis alias?
               </p>
               <Link to="/products/mens-watches" className="btn hero-btn mr-20">
-                Men's Watches
+                Shop Men's Watches
               </Link>
               <Link to="/products/womens-watches" className="btn hero-btn">
-                Women's Watches
+                Shop Women's Watches
+              </Link>
+            </article>
+          </div>
+        </div>
+        <div className="section-center mw-100">
+          <div className="image-wrapper" style={{ backgroundImage: `url(${motorcycle})` }}>
+            <article className="content">
+              <h1>
+                Loads of
+                <br />
+                Motorcycles
+              </h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque
+                possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
+                quis alias?
+              </p>
+              <Link to="/products/motorcycle" className="btn hero-btn">
+                Shop Motorcycles
               </Link>
             </article>
           </div>
