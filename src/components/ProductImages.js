@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { FaWindowClose } from 'react-icons/fa';
 const ProductImages = ({ images = [[]] }) => {
   const [main, setMain] = useState(images[0]);
+  const [isActive, setIsActive] = useState(false);
+  let modalBg = document.querySelector('.modal-background');
+  const imageModalActive = () => {
+    setIsActive(true);
+    modalBg.classList.add('active');
+  };
+  const closeActiveModal = () => {
+    setIsActive(false);
+    modalBg.classList.remove('active');
+  };
+
   return (
-    <Wrapper>
-      <img src={main} alt="" className="main " />
+    <Wrapper className={isActive ? 'image-modal' : ''}>
+      <FaWindowClose className="close-image-modal" onClick={closeActiveModal} />
+      <img src={main} alt="" className="main" onClick={imageModalActive} />
       <div className="gallery">
         {images.map((image, index) => {
           return (
@@ -23,8 +36,41 @@ const ProductImages = ({ images = [[]] }) => {
 };
 
 const Wrapper = styled.section`
+  &.image-modal {
+    position: fixed;
+    height: 90vh;
+    width: 90vw;
+    background: rgb(255, 255, 255);
+    left: 5vw;
+    top: 5vh;
+    padding: 4rem;
+    border-radius: 12px;
+    .close-image-modal {
+      display: flex;
+      position: absolute;
+      right: 100px;
+      font-size: 40px;
+      cursor: pointer;
+      &:hover {
+        color: var(--clr-yellow-dark);
+      }
+    }
+    .main {
+      height: 60vh;
+    }
+    .gallery {
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      height: 150px;
+    }
+  }
   .main {
     height: 600px;
+  }
+  .close-image-modal {
+    display: none;
   }
   img {
     width: 100%;

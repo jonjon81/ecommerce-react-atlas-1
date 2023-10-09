@@ -218,3 +218,15 @@ p {
 section.sc-hzhJZQ.guhiTb span.product-item {
   padding-right: 5px;
 }
+
+.modal-background {
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.modal-background.active {
+  display: block;
+}

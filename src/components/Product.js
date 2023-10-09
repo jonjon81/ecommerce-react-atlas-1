@@ -46,7 +46,7 @@ const Wrapper = styled.article`
     opacity: 0;
     cursor: pointer;
     svg {
-      width: 50px;
+      width: 55px;
       height: 50px;
       padding: 10px;
       border-radius: 50%;

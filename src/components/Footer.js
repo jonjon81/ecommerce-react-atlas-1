@@ -7,70 +7,70 @@ const Footer = () => {
       <div className="footer-container">
         <ul>
           <li>
-            <a href="/test">Lorem ipsum</a>
+            <a href="/">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">Lorem</a>
+            <a href="/">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum dolor</a>
+            <a href="/">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum</a>
+            <a href="/">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="/test">Lorem ipsum</a>
-          </li>
-          <li>
-            <a href="/test">Lorem</a>
-          </li>
-          <li>
-            <a href="/test">Lorem ipsum dolor</a>
-          </li>
-          <li>
-            <a href="/test">Lorem ipsum dolor</a>
-          </li>
-          <li>
-            <a href="/test">lorem</a>
+            <a href="/">Lorem ipsum</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/test">Lorem ipsum</a>
+            <a href="/">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">Lorem</a>
+            <a href="/">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum dolor</a>
+            <a href="/">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum</a>
+            <a href="/">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum</a>
+            <a href="/">lorem</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/test">Lorem ipsum</a>
+            <a href="/">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">Lorem</a>
+            <a href="/">Lorem</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum dolor</a>
+            <a href="/">Lorem ipsum dolor</a>
           </li>
           <li>
-            <a href="/test">Lorem ipsum dolor</a>
+            <a href="/">Lorem ipsum</a>
           </li>
           <li>
-            <a href="/test">lorem</a>
+            <a href="/">Lorem ipsum</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Lorem ipsum</a>
+          </li>
+          <li>
+            <a href="/">Lorem</a>
+          </li>
+          <li>
+            <a href="/">Lorem ipsum dolor</a>
+          </li>
+          <li>
+            <a href="/">Lorem ipsum dolor</a>
+          </li>
+          <li>
+            <a href="/">lorem</a>
           </li>
         </ul>
       </div>
@@ -125,8 +125,16 @@ const Container = styled.footer`
       }
     }
   }
-  @media (min-width: 776px) {
+  @media (min-width: 768px) {
     flex-direction: column;
+  }
+  @media (max-width: 767px) {
+    .footer-container {
+      flex-wrap: wrap;
+      ul {
+        width: 50%;
+      }
+    }
   }
 `;
 
