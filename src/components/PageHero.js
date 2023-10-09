@@ -6,14 +6,20 @@ const PageHero = ({ title, product, category }) => {
     <Wrapper>
       <div className="section-center">
         <h3>
-          <Link to="/">Home </Link>
-          {product && <Link to="/products">/ products</Link>}
-          {category && <Link to="/products">/ test-products</Link> && (
-            <Link to={`/products/${category}/`}>
-              {product} / {category}
+          <Link to="/">
+            <span>Home</span>{' '}
+          </Link>
+          {product && (
+            <Link to="/products">
+              &gt; <span className="product-item">products</span>
             </Link>
           )}
-          / {title}
+          {category && <Link to="/products"></Link> && (
+            <Link to={`/products/${category}/`}>
+              {product} &gt; <span className="cat-item">{category}</span>
+            </Link>
+          )}
+          &gt; <span> {title}</span>
         </h3>
       </div>
     </Wrapper>
@@ -21,20 +27,32 @@ const PageHero = ({ title, product, category }) => {
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-2);
   width: 100%;
-  min-height: 20vh;
+  min-height: 80px;
   display: flex;
   align-items: center;
-
-  color: var(--clr-primary-1);
+  color: #fff;
   a {
-    color: var(--clr-primary-3);
-    padding: 0.5rem;
+    color: #fff;
+    padding-right: 0;
     transition: var(--transition);
+    font-weight: 400;
   }
   a:hover {
-    color: var(--clr-primary-1);
+    span {
+      // color: var(--clr-yellow-dark);
+      text-decoration: underline;
+    }
+  }
+
+  span.cat-item {
+    padding-right: 5px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 0;
   }
 `;
 

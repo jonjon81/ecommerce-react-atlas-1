@@ -8,7 +8,7 @@ Variables
   /* dark shades of primary color*/
   --clr-primary-0: #131921;
   --clr-primary-1: #082f49;
-  --clr-primary-2: #082f49;
+  --clr-primary-2: #232f3f;
   --clr-primary-3: #075985;
   --clr-primary-4: #0369a1;
   /* primary/main color */
@@ -213,4 +213,8 @@ p {
 .page {
   min-height: calc(100vh - (20vh + 10rem));
   overflow: hidden;
+}
+/* Minor updates to unique items */
+section.sc-hzhJZQ.guhiTb span.product-item {
+  padding-right: 5px;
 }

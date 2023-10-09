@@ -38,23 +38,27 @@ const Wrapper = styled.article`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--clr-primary-5);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     transition: var(--transition);
     opacity: 0;
     cursor: pointer;
     svg {
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      border-radius: 50%;
       font-size: 1.25rem;
       color: var(--clr-white);
+      background: var(--clr-primary-5);
     }
   }
   .container:hover img {
     opacity: 0.5;
+    object-fit: cover;
   }
   .container:hover .link {
     opacity: 1;
