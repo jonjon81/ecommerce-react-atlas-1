@@ -36,7 +36,7 @@ const CategoryProducts = () => {
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-grey-10);
+  background: #fff;
   .category {
     margin: 4rem auto;
     display: grid;

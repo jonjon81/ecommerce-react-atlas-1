@@ -1,45 +1,169 @@
 import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import heroBcg from '../assets/hero-bcg.jpeg';
-import heroBcg2 from '../assets/hero-bcg-2.jpeg';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+import main from '../assets/categories/main.jpeg';
+import sunglasses from '../assets/categories/sunglasses.jpg';
+import furniture from '../assets/categories/furniture.jpg';
+import watches from '../assets/categories/watches.jpg';
+
 const Hero = () => {
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
   return (
-    <Wrapper className="section-center">
-      <article className="content">
-        <h1>
-          Get your <br />
-          products now
-        </h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque possimus
-          velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis alias?
-        </p>
-        <Link to="/products" className="btn hero-btn">
-          shop now
-        </Link>
-      </article>
-      <article className="img-container">
-        <img src={heroBcg} alt="nice table" className="main-img" />
-        <img src={heroBcg2} alt="person working" className="accent-img" />
-      </article>
+    <Wrapper className="mw-100">
+      <FaChevronLeft className="slider-left" />
+      <Slider className="hero-slider" {...settings}>
+        <div className="section-center mw-100">
+          <div className="image-wrapper" style={{ backgroundImage: `url(${main})` }}>
+            <article className="content">
+              <h1>
+                Get your <br />
+                products now
+              </h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque
+                possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
+                quis alias?
+              </p>
+              <Link to="/products" className="btn hero-btn">
+                shop now
+              </Link>
+            </article>
+          </div>
+        </div>
+        <div className="section-center mw-100">
+          <div className="image-wrapper" style={{ backgroundImage: `url(${sunglasses})` }}>
+            <article className="content">
+              <h1>
+                Huge selection <br />
+                of sunglasses
+              </h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque
+                possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
+                quis alias?
+              </p>
+              <Link to="/products/sunglasses" className="btn hero-btn">
+                shop sunglasses
+              </Link>
+            </article>
+          </div>
+        </div>
+        <div className="section-center mw-100">
+          <div className="image-wrapper" style={{ backgroundImage: `url(${furniture})` }}>
+            <article className="content">
+              <h1>
+                All the latest <br />
+                furniture
+              </h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque
+                possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
+                quis alias?
+              </p>
+              <Link to="/products/furniture" className="btn hero-btn">
+                shop furniture
+              </Link>
+            </article>
+          </div>
+        </div>
+        <div className="section-center mw-100">
+          <div className="image-wrapper" style={{ backgroundImage: `url(${watches})` }}>
+            <article className="content">
+              <h1>
+                All types
+                <br />
+                of watches
+              </h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque
+                possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
+                quis alias?
+              </p>
+              <Link to="/products/mens-watches" className="btn hero-btn mr-20">
+                Men's Watches
+              </Link>
+              <Link to="/products/womens-watches" className="btn hero-btn">
+                Women's Watches
+              </Link>
+            </article>
+          </div>
+        </div>
+      </Slider>
+      <FaChevronRight className="slider-right" />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  min-height: 60vh;
-  display: grid;
-  place-items: center;
-  .img-container {
-    display: none;
+  .slider-left,
+  .slider-right {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 40px;
+    top: 50%;
+    transform: translate(0, 50%);
+  }
+  .slider-left {
+    left: 10px;
+  }
+  .slider-right {
+    right: 10px;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    height: 100px;
+    width: 70px;
+    &:hover {
+      border: 2px solid #fff;
+    }
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: transparent;
+  }
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 5rem;
+    display: flex;
+    .content {
+      padding: 3rem;
+      height: max-content;
+      background: rgba(0, 0, 0, 0.8);
+      h1 {
+        color: #fff;
+      }
+    }
   }
 
   p {
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
-    color: var(--clr-grey-5);
+    color: #fff;
     font-size: 1rem;
   }
   @media (min-width: 992px) {

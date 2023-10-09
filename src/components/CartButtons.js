@@ -1,43 +1,43 @@
-import React from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
+import React from 'react';
+import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { useProductsContext } from '../context/products_context';
+import { useCartContext } from '../context/cart_context';
+import { useUserContext } from '../context/user_context';
 const CartButton = () => {
-  const { closeSidebar } = useProductsContext()
-  const { total_items, clearCart } = useCartContext()
-  const { loginWithRedirect, myUser, logout } = useUserContext()
+  const { closeSidebar } = useProductsContext();
+  const { total_items, clearCart } = useCartContext();
+  const { loginWithRedirect, myUser, logout } = useUserContext();
   return (
-    <Wrapper className='cart-btn-wrapper'>
-      <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
+    <Wrapper className="cart-btn-wrapper">
+      <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         Cart
-        <span className='cart-container'>
+        <span className="cart-container">
           <FaShoppingCart />
-          <span className='cart-value'>{total_items}</span>
+          <span className="cart-value">{total_items}</span>
         </span>
       </Link>
       {myUser ? (
         <button
-          type='button'
-          className='auth-btn'
+          type="button"
+          className="auth-btn"
           onClick={() => {
-            clearCart()
-            localStorage.removeItem('user')
-            logout({ returnTo: window.location.origin })
+            clearCart();
+            localStorage.removeItem('user');
+            logout({ returnTo: window.location.origin });
           }}
         >
           Logout <FaUserMinus />
         </button>
       ) : (
-        <button type='button' className='auth-btn' onClick={loginWithRedirect}>
+        <button type="button" className="auth-btn" onClick={loginWithRedirect}>
           Login <FaUserPlus />
         </button>
       )}
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   display: grid;
@@ -46,10 +46,9 @@ const Wrapper = styled.div`
   width: 225px;
 
   .cart-btn {
-    color: var(--clr-grey-1);
+    color: #fff;
     font-size: 1.5rem;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-1);
     display: flex;
 
     align-items: center;
@@ -61,13 +60,14 @@ const Wrapper = styled.div`
     svg {
       height: 1.6rem;
       margin-left: 5px;
+      color: #fff;
     }
   }
   .cart-value {
     position: absolute;
     top: -10px;
     right: -16px;
-    background: var(--clr-primary-5);
+    background: var(--clr-yellow-dark);
     width: 16px;
     height: 16px;
     display: flex;
@@ -85,11 +85,11 @@ const Wrapper = styled.div`
     border-color: transparent;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--clr-grey-1);
+    color: #fff;
     letter-spacing: var(--spacing);
     svg {
       margin-left: 5px;
     }
   }
-`
-export default CartButton
+`;
+export default CartButton;

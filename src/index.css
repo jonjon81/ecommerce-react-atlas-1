@@ -6,6 +6,7 @@ Variables
 
 :root {
   /* dark shades of primary color*/
+  --clr-primary-0: #131921;
   --clr-primary-1: #082f49;
   --clr-primary-2: #082f49;
   --clr-primary-3: #075985;
@@ -35,6 +36,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
+  --clr-yellow-dark: #f08804;
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
@@ -105,6 +107,10 @@ p {
   color: var(--clr-grey-3);
 }
 
+.mr-20 {
+  margin-right: 20px;
+}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 3rem;
@@ -135,6 +141,11 @@ p {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+
+.mw-100 {
+  max-width: 100vw;
+  height: calc(100vh - 5rem);
 }
 
 @media screen and (min-width: 992px) {

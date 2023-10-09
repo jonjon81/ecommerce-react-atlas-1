@@ -43,6 +43,7 @@ const Nav = () => {
 };
 
 const NavContainer = styled.nav`
+  background: var(--clr-primary-0);
   height: 5rem;
   display: flex;
   align-items: center;
@@ -57,6 +58,12 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    span {
+      color: var(--clr-yellow-dark);
+    }
+    h3 {
+      color: #fff;
+    }
     img {
       width: 175px;
       margin-left: -15px;
@@ -93,13 +100,14 @@ const NavContainer = styled.nav`
         margin: 0 0.5rem;
       }
       a {
-        color: var(--clr-grey-3);
+        color: #fff;
         font-size: 1rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
+        border: 2px solid transparent;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-7);
+          border-bottom: 2px solid var(--clr-yellow-dark);
         }
       }
     }
