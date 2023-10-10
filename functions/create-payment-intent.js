@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {
       newTotalAmount = total_amount.toFixed(2);
       return newTotalAmount;
     } else {
-      return shipping_fee + total_amount.toFixed(2);
+      return shipping_fee + total_amount;
     }
   };
   try {
