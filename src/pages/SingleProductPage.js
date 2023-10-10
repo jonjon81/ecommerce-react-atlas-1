@@ -17,6 +17,10 @@ const SingleProductPage = () => {
     fetchSingleProduct,
   } = useProductsContext();
 
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     fetchSingleProduct(`${url}/${id}`);
     // eslint-disable-next-line
@@ -53,7 +57,7 @@ const SingleProductPage = () => {
     <Wrapper>
       <PageHero title={title} category={category} product />
       <div className="section section-center page">
-        <Link to="/products" className="btn">
+        <Link onClick={scrollTop} to="/products" className="btn">
           back to products
         </Link>
         <div className="product-center">

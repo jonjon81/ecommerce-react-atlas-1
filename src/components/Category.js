@@ -3,17 +3,22 @@ import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+  console.log('scrolllll');
+};
+
 const Category = ({ thumbnail, title, category }) => {
   return (
     <Wrapper>
       <div className="container">
         <img src={thumbnail} alt={title} />
-        <Link to={`/products/${category}`} className="link">
+        <Link onClick={scrollTop} to={`/products/${category}`} className="link">
           <FaSearch />
         </Link>
       </div>
       <footer>
-        <Link to={`/products/${category}`}>
+        <Link onClick={scrollTop} to={`/products/${category}`}>
           <h5>{category}</h5>
         </Link>
       </footer>

@@ -1,21 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
 const PageHero = ({ title, product, category }) => {
   return (
     <Wrapper>
       <div className="section-center">
         <h3>
-          <Link to="/">
+          <Link onClick={scrollTop} to="/">
             <span>Home</span>{' '}
           </Link>
           {product && (
-            <Link to="/products">
+            <Link onClick={scrollTop} to="/products">
               &gt; <span className="product-item">products</span>
             </Link>
           )}
           {category && <Link to="/products"></Link> && (
-            <Link to={`/products/${category}/`}>
+            <Link onClick={scrollTop} to={`/products/${category}/`}>
               {product} &gt; <span className="cat-item">{category}</span>
             </Link>
           )}

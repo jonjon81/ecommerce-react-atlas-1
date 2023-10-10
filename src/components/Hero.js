@@ -12,6 +12,10 @@ import furniture from '../assets/categories/furniture.jpg';
 import watches from '../assets/categories/watches.jpg';
 import motorcycle from '../assets/categories/motorcycle.jpg';
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
+
 const Hero = () => {
   var settings = {
     infinite: true,
@@ -39,7 +43,7 @@ const Hero = () => {
                 possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
                 quis alias?
               </p>
-              <Link to="/products" className="btn hero-btn">
+              <Link onClick={scrollTop} to="/products" className="btn hero-btn">
                 shop now
               </Link>
             </article>
@@ -57,7 +61,7 @@ const Hero = () => {
                 possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
                 quis alias?
               </p>
-              <Link to="/products/sunglasses" className="btn hero-btn">
+              <Link onClick={scrollTop} to="/products/sunglasses" className="btn hero-btn">
                 shop sunglasses
               </Link>
             </article>
@@ -75,7 +79,7 @@ const Hero = () => {
                 possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
                 quis alias?
               </p>
-              <Link to="/products/furniture" className="btn hero-btn">
+              <Link onClick={scrollTop} to="/products/furniture" className="btn hero-btn">
                 shop furniture
               </Link>
             </article>
@@ -94,7 +98,7 @@ const Hero = () => {
                 possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
                 quis alias?
               </p>
-              <Link to="/products/mens-watches" className="btn hero-btn mr-20">
+              <Link onClick={scrollTop} to="/products/mens-watches" className="btn hero-btn mr-20">
                 Shop Men's Watches
               </Link>
               <Link to="/products/womens-watches" className="btn hero-btn">
@@ -116,7 +120,7 @@ const Hero = () => {
                 possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi
                 quis alias?
               </p>
-              <Link to="/products/motorcycle" className="btn hero-btn">
+              <Link onClick={scrollTop} to="/products/motorcycle" className="btn hero-btn">
                 Shop Motorcycles
               </Link>
             </article>

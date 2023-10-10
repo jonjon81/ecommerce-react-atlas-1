@@ -10,6 +10,11 @@ import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
 import Deal from './Deal';
+
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
+
 const Deals = () => {
   const { products_loading: loading, products_error: error, featured_products: featured } = useProductsContext();
   if (loading) {
@@ -34,7 +39,7 @@ const Deals = () => {
       <div className="title">
         <h2>Huge Sales</h2>
         <p>Our top deals of 15%+ off</p>
-        <Link to="/products" className="btn light">
+        <Link onClick={scrollTop} to="/products" className="btn light">
           Shop now
         </Link>
       </div>

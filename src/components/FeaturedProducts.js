@@ -26,6 +26,10 @@ const FeaturedProducts = () => {
     arrows: true,
   };
 
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Wrapper className="section">
       <div className="title">
@@ -40,7 +44,7 @@ const FeaturedProducts = () => {
           })}
         </Slider>
       </div>
-      <Link to="/products" className="btn">
+      <Link onClick={scrollTop} to="/products" className="btn">
         all products
       </Link>
     </Wrapper>
