@@ -8,6 +8,13 @@ const CartTotals = () => {
   const { total_amount, shipping_fee } = useCartContext();
   const { myUser, loginWithRedirect } = useUserContext();
 
+  let updatedShipFee = formatPrice(shipping_fee);
+  let updatedTotaAmount = formatPrice(total_amount + shipping_fee);
+  if (total_amount > 50) {
+    updatedShipFee = 0.0;
+    updatedTotaAmount = formatPrice(total_amount);
+  }
+
   return (
     <Wrapper>
       <div>
@@ -16,11 +23,11 @@ const CartTotals = () => {
             subtotal :<span>{formatPrice(total_amount)}</span>
           </h5>
           <p>
-            shipping fee :<span>{formatPrice(shipping_fee)}</span>
+            shipping fee :<span>{updatedShipFee}</span>
           </p>
           <hr />
           <h4>
-            order total :<span>{formatPrice(total_amount + shipping_fee)}</span>
+            order total :<span>{updatedTotaAmount}</span>
           </h4>
         </article>
         {myUser ? (

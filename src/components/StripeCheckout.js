@@ -39,6 +39,13 @@ const CheckoutForm = () => {
     // eslint-disable-next-line
   }, []);
 
+  // let updatedShipFee = formatPrice(shipping_fee);
+  let updatedTotaAmount = formatPrice(total_amount + shipping_fee);
+  if (total_amount > 50) {
+    // updatedShipFee = 0.0;
+    updatedTotaAmount = formatPrice(total_amount);
+  }
+
   const cardStyle = {
     style: {
       base: {
@@ -94,7 +101,7 @@ const CheckoutForm = () => {
       ) : (
         <article>
           <h4>Hello, {myUser && myUser.name}</h4>
-          <p>Your total is {formatPrice(total_amount)}</p>
+          <p>Your total is {updatedTotaAmount}</p>
           <p>Test Card Number: 4242 4242 4242 4242</p>
         </article>
       )}

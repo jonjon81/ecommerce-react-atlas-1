@@ -67,8 +67,6 @@ const cart_reducer = (state, action) => {
         const { amount, price, discountPercentage } = cartItem;
         total.total_items += amount;
         total.total_amount += price * amount * (1 - discountPercentage / 100).toFixed(2);
-        console.dir('total.total_amount');
-        console.dir(total.total_amount);
         return total;
       },
       { total_items: 0, total_amount: 0 }
