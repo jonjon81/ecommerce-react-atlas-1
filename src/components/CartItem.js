@@ -1,11 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
+import { discountedPrice } from '../utils/helpers';
 import AmountButtons from './AmountButtons';
 import { FaTrash } from 'react-icons/fa';
 import { useCartContext } from '../context/cart_context';
 import { Link } from 'react-router-dom';
-const CartItem = ({ id, image, name, price, amount, category }) => {
+const CartItem = ({ id, image, name, price, amount, category, discountPercentage }) => {
+  // const newPrice = discountedPrice(price, discountPercentage);
+  // console.dir('newPrice');
+  // console.dir(newPrice);
+  // console.dir('price');
+  // console.dir(price);
+  // console.dir('discountPercentage');
+  // console.dir(discountPercentage);
+  let discountNumber = price * ((100 - Math.round(discountPercentage)) / 100);
   const { removeItem, toggleAmount } = useCartContext();
   const increase = () => {
     toggleAmount(id, 'inc');
@@ -23,12 +32,16 @@ const CartItem = ({ id, image, name, price, amount, category }) => {
           <Link to={`/products/${category}/${id}`}>
             <h5 className="name">{name}</h5>
           </Link>
-          <h5 className="price-small">{formatPrice(price)}</h5>
+          <h5 className="price-small">
+            {formatPrice(price)} / {discountedPrice(price, discountPercentage)}{' '}
+          </h5>
         </div>
       </div>
-      <h5 className="price">{formatPrice(price)}</h5>
+      <h5 className="price">
+        <span className="crossed-out">{formatPrice(price)}</span> / {discountedPrice(price, discountPercentage)}
+      </h5>
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-      <h5 className="subtotal">{formatPrice(price * amount)}</h5>
+      <h5 className="subtotal">{formatPrice(discountNumber * amount)}</h5>
       <button className="remove-btn" onClick={() => removeItem(id)}>
         <FaTrash />
       </button>

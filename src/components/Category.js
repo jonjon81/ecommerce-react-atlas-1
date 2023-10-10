@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const scrollTop = () => {
   window.scrollTo(0, 0);
-  console.log('scrolllll');
 };
 
 const Category = ({ thumbnail, title, category }) => {

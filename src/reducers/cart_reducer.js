@@ -26,6 +26,7 @@ const cart_reducer = (state, action) => {
         price: product.price,
         max: product.stock,
         category: product.category,
+        discountPercentage: product.discountPercentage,
       };
       return { ...state, cart: [...state.cart, newItem] };
     }
@@ -63,9 +64,11 @@ const cart_reducer = (state, action) => {
   if (action.type === COUNT_CART_TOTALS) {
     const { total_items, total_amount } = state.cart.reduce(
       (total, cartItem) => {
-        const { amount, price } = cartItem;
+        const { amount, price, discountPercentage } = cartItem;
         total.total_items += amount;
-        total.total_amount += price * amount;
+        total.total_amount += price * amount * (1 - discountPercentage / 100).toFixed(2);
+        console.dir('total.total_amount');
+        console.dir(total.total_amount);
         return total;
       },
       { total_items: 0, total_amount: 0 }

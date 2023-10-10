@@ -6,7 +6,7 @@ export const formatPrice = (number) => {
 };
 
 export const discountPercent = (number) => {
-  return Math.ceil(number);
+  return Math.round(number);
 };
 
 export const discountedPrice = (oldprice, discount) => {
