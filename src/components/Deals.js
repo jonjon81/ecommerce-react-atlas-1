@@ -36,7 +36,10 @@ const Deals = () => {
         <Slider {...settings}>
           {featured.map((product) => {
             if (product.discountPercentage > 15) {
-              console.log(product.discountPercentage);
+              // add all items in array after building new one, then can use <hidden> here.??
+              //  {featured.slice(0, 20).map((product) => {
+              //     return <Product key={product.id} {...product} />;
+              // })}
               return <Deal key={product.id} {...product} />;
             }
           })}
@@ -47,10 +50,8 @@ const Deals = () => {
 };
 
 const Wrapper = styled.section`
-  background: #131921;
-  h2 {
-    color: #fff;
-  }
+  background: var(--clr-primary-10);
+  background: #fff;
   .featured {
     margin: 4rem auto;
     display: grid;
@@ -64,16 +65,11 @@ const Wrapper = styled.section`
     }
     .slick-dots {
       bottom: -40px;
-      li {
-        button:before {
-          color: #fff;
-        }
-      }
     }
 
     .slick-prev:before,
     .slick-next:before {
-      color: var(--clr-primary-10);
+      color: var(--clr-primary-5);
       font-size: 30px;
     }
     .slick-next {

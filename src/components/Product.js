@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
+import { discountPercent } from '../utils/helpers';
+import { discountedPrice } from '../utils/helpers';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-const Product = ({ thumbnail, title, price, id, category }) => {
+const Product = ({ thumbnail, title, price, id, category, discountPercentage }) => {
   return (
     <Wrapper>
       <div className="container">
@@ -14,7 +16,8 @@ const Product = ({ thumbnail, title, price, id, category }) => {
       </div>
       <footer>
         <h5>{title}</h5>
-        <p>{formatPrice(price)}</p>
+        <p className="crossed-out">{formatPrice(price)}</p>
+        <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
       </footer>
     </Wrapper>
   );
@@ -76,8 +79,11 @@ const Wrapper = styled.article`
   }
 
   footer p {
-    color: var(--clr-primary-5);
     letter-spacing: var(--spacing);
+    &.new-price {
+      color: var(--clr-primary-5);
+      font-weight: bold;
+    }
   }
 `;
 export default Product;

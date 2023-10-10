@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
 import { formatPrice } from '../utils/helpers';
+import { discountedPrice } from '../utils/helpers';
 import { Loading, Error, ProductImages, Rating, PageHero, AddToCart } from '../components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -35,7 +36,19 @@ const SingleProductPage = () => {
     return <Error />;
   }
 
-  const { category, title, price, description, stock, rating, reviews, id: sku, brand, images } = product;
+  const {
+    category,
+    title,
+    price,
+    description,
+    stock,
+    rating,
+    reviews,
+    id: sku,
+    brand,
+    images,
+    discountPercentage,
+  } = product;
   return (
     <Wrapper>
       <PageHero title={title} category={category} product />
@@ -48,7 +61,8 @@ const SingleProductPage = () => {
           <section className="content">
             <h2>{title}</h2>
             <Rating rating={rating} reviews={reviews} />
-            <h5 className="price">{formatPrice(price)}</h5>
+            <h5 className="price crossed-out">{formatPrice(price)}</h5>
+            <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
             <p className="desc">{description}</p>
             <p className="info">
               <span>Available : </span>
@@ -77,8 +91,10 @@ const Wrapper = styled.main`
     gap: 4rem;
     margin-top: 2rem;
   }
-  .price {
+  .new-price {
     color: var(--clr-primary-5);
+    font-size: 1.25rem;
+    font-weight: bold;
   }
   .desc {
     line-height: 2;

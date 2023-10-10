@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
+import { discountPercent } from '../utils/helpers';
+import { discountedPrice } from '../utils/helpers';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const Deal = ({ thumbnail, title, price, id, category, discountPercentage }) => {
@@ -13,10 +15,10 @@ const Deal = ({ thumbnail, title, price, id, category, discountPercentage }) => 
         </Link>
       </div>
       <footer>
+        <p className="discount-percent">{discountPercent(discountPercentage)}% off</p>
         <h5>{title}</h5>
-        <h4>{discountPercentage}% off</h4>
-        <p>{formatPrice(price)}</p>
-        <p> NEW PRICE</p>
+        <p className="crossed-out">{formatPrice(price)}</p>
+        <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
       </footer>
     </Wrapper>
   );
@@ -70,12 +72,25 @@ const Wrapper = styled.article`
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    * {
-      color: #fff;
-    }
-    h4 {
+
+    .discount-percent {
       background: var(--clr-red-dark);
       padding: 5px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .crossed-out {
+      padding: 5px;
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    .new-price {
+      font-size: 1 rem;
+      color: var(--clr-primary-5);
+      font-weight: bold;
     }
   }
   footer h5,
@@ -85,7 +100,6 @@ const Wrapper = styled.article`
   }
 
   footer p {
-    color: #fff;
     letter-spacing: var(--spacing);
   }
 `;

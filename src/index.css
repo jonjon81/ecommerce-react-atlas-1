@@ -214,7 +214,12 @@ p {
   min-height: calc(100vh - (20vh + 10rem));
   overflow: hidden;
 }
-/* Minor updates to unique items */
+
+.crossed-out {
+  text-decoration: line-through;
+  color: var(--clr-grey-3);
+}
+
 section.sc-hzhJZQ.guhiTb span.product-item {
   padding-right: 5px;
 }

@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
+import { discountedPrice } from '../utils/helpers';
 import { Link } from 'react-router-dom';
 const ListView = ({ products }) => {
   return (
     <Wrapper>
       {products.map((product) => {
-        const { id, thumbnail, name, price, description, category } = product;
+        const { id, thumbnail, name, price, description, category, discountPercentage } = product;
         return (
           <article key={id}>
             <img src={thumbnail} alt={name} />
             <div>
               <h4>{name}</h4>
-              <h5 className="price">{formatPrice(price)}</h5>
+              <h5 className="price crossed-out">{formatPrice(price)}</h5>
+              <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
               <p>{description.substring(0, 150)}...</p>
               <Link to={`/products/${category}/${id}`} className="btn">
                 Details
@@ -36,14 +38,17 @@ const Wrapper = styled.section`
     height: 200px;
     object-fit: contain;
     border-radius: var(--radius);
-    margin-bottom: 1rem;
   }
   h4 {
     margin-bottom: 0.5rem;
   }
   .price {
+    font-weight: 400;
+  }
+  .new-price {
     color: var(--clr-primary-6);
     margin-bottom: 0.75rem;
+    font-weight: bold;
   }
   p {
     max-width: 45em;
