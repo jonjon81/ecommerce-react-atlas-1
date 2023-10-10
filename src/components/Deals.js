@@ -25,6 +25,8 @@ const Deals = () => {
     arrows: true,
   };
 
+  let topDiscounts = featured.filter((product) => product.discountPercentage > 15);
+
   return (
     <Wrapper className="section">
       <div className="title">
@@ -34,14 +36,8 @@ const Deals = () => {
 
       <div className="section-center featured">
         <Slider {...settings}>
-          {featured.map((product) => {
-            if (product.discountPercentage > 15) {
-              // add all items in array after building new one, then can use <hidden> here.??
-              //  {featured.slice(0, 20).map((product) => {
-              //     return <Product key={product.id} {...product} />;
-              // })}
-              return <Deal key={product.id} {...product} />;
-            }
+          {topDiscounts.map((product) => {
+            return <Deal key={product.id} {...product} />;
           })}
         </Slider>
       </div>
