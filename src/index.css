@@ -191,6 +191,12 @@ p {
   line-height: 1;
   padding: 10px;
 }
+
+.btn.light {
+  background: #fff;
+  color: #000;
+}
+
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);

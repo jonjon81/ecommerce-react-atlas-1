@@ -1,9 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
-// Import css files
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
 import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
@@ -20,8 +22,8 @@ const Deals = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: true,
   };
 
@@ -30,30 +32,96 @@ const Deals = () => {
   return (
     <Wrapper className="section">
       <div className="title">
-        <h2>Our top deals of 15%+ off</h2>
-        <div className="underline"></div>
+        <h2>Huge Sales</h2>
+        <p>Our top deals of 15%+ off</p>
+        <Link to="/products" className="btn light">
+          Shop now
+        </Link>
       </div>
 
-      <div className="section-center featured">
+      <div className="section-center featured deals">
+        <FaChevronLeft className="slider-left" />
         <Slider {...settings}>
           {topDiscounts.map((product) => {
             return <Deal key={product.id} {...product} />;
           })}
         </Slider>
+        <FaChevronRight className="slider-right" />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-primary-10);
-  background: #fff;
+  .deals {
+    .slick-prev:before,
+    .slick-next:before {
+      opacity: 0;
+    }
+    .slick-dots li.slick-active button:before {
+      opacity: 1;
+    }
+    position: relative;
+    .slider-left,
+    .slider-right {
+      position: absolute;
+      z-index: 1;
+      font-size: 40px;
+      color: #fff;
+      top: 50%;
+      transform: translate(0, 50%);
+      pointer-events: none;
+    }
+
+    .slider-left {
+      left: -40px;
+    }
+    .slider-right {
+      right: -40px;
+    }
+  }
+  .title {
+    min-width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    * {
+      text-align: left;
+    }
+    .btn {
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+
+  display: flex;
+  max-width: 1220px;
+  margin: auto;
+  align-items: center;
+  background: var(--clr-primary-0);
+  border-radius: 25px;
+  padding: 30px 60px;
+  .slick-slide {
+    background-color: #fff;
+    border: 10px solid var(--clr-primary-0);
+    border-radius: 25px;
+    padding: 20px;
+  }
+  h2 {
+    color: #fff;
+    padding-right: 50px;
+  }
+
   .featured {
     margin: 4rem auto;
     display: grid;
     gap: 2.5rem;
     .slick-dots li button:before {
       font-size: 16px;
+      color: #fff;
     }
     .container {
       padding: 10px;
@@ -65,14 +133,14 @@ const Wrapper = styled.section`
 
     .slick-prev:before,
     .slick-next:before {
-      color: var(--clr-primary-5);
-      font-size: 30px;
+      color: #fff;
+      font-size: 80px;
     }
     .slick-next {
-      right: -50px;
+      right: -5px;
     }
     .slick-prev {
-      left: -50px;
+      left: -70px;
     }
     footer {
       padding: 0 10px;
@@ -84,6 +152,7 @@ const Wrapper = styled.section`
         display: -webkit-box;
         -webkit-line-clamp: 2; /* number of lines to show */
         line-clamp: 2;
+        height: 40px;
         -webkit-box-orient: vertical;
       }
     }

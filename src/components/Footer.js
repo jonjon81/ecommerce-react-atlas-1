@@ -93,7 +93,7 @@ const Container = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--clr-black);
+  background: var(--clr-primary-0);
   text-align: center;
   span {
     color: var(--clr-primary-8);
