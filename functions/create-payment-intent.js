@@ -9,9 +9,11 @@ exports.handler = async function (event, context) {
     // Calculate the order total on the server to prevent
     // people from directly manipulating the amount on the client
     if (total_amount > 50) {
-      return total_amount;
+      let newTotalAmount = 0.0;
+      newTotalAmount = total_amount.toFixed(2);
+      return newTotalAmount;
     } else {
-      return shipping_fee + total_amount;
+      return shipping_fee + total_amount.toFixed(2);
     }
   };
   try {
