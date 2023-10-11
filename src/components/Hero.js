@@ -23,7 +23,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
   };
 
@@ -238,7 +238,10 @@ const Wrapper = styled.section`
   @media (max-width: 576px) {
     .image-wrapper {
       padding: 0;
-      height: calc(100vw - 5rem);
+      height: 100%;
+      .content {
+        height: 100%;
+      }
     }
   }
 `;
