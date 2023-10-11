@@ -51,6 +51,7 @@ const SidebarContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    color: #fff;
   }
   .close-btn {
     font-size: 2rem;
@@ -78,7 +79,7 @@ const SidebarContainer = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
-    color: var(--clr-grey-3);
+    color: #fff;
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
@@ -96,7 +97,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--clr-white);
+    background: var(--clr-primary-0);
     transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;

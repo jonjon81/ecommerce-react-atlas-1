@@ -114,6 +114,10 @@ const Wrapper = styled.main`
     }
   }
 
+  .crossed-out {
+    font-size: 1.25rem;
+  }
+
   @media (min-width: 992px) {
     .product-center {
       grid-template-columns: 1fr 1fr;
