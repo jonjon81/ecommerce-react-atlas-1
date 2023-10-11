@@ -4,10 +4,16 @@ import { FaWindowClose } from 'react-icons/fa';
 const ProductImages = ({ images = [[]] }) => {
   const [main, setMain] = useState(images[0]);
   const [isActive, setIsActive] = useState(false);
+  let vpWidth = window.innerWidth;
   let modalBg = document.querySelector('.modal-background');
   const imageModalActive = () => {
-    setIsActive(true);
-    modalBg.classList.add('active');
+    vpWidth = window.innerWidth;
+    if (vpWidth > 992) {
+      console.log('vpwidth');
+      console.log(vpWidth);
+      setIsActive(true);
+      modalBg.classList.add('active');
+    }
   };
   const closeActiveModal = () => {
     setIsActive(false);
@@ -70,10 +76,6 @@ const Wrapper = styled.section`
     }
     .gallery {
       margin-top: 40px;
-    }
-
-    .gallery img {
-      height: 150px;
     }
   }
   .main {

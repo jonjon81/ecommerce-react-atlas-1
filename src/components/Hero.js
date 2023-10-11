@@ -235,6 +235,12 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
     }
   }
+  @media (max-width: 576px) {
+    .image-wrapper {
+      padding: 0;
+      height: calc(100vw - 5rem);
+    }
+  }
 `;
 
 export default Hero;

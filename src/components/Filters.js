@@ -32,7 +32,7 @@ const Filters = () => {
           {/* category */}
           <div className="form-control -category">
             <h5>category</h5>
-            <div>
+            <div className="category-list-holder">
               {categories.map((c, index) => {
                 return (
                   <button
@@ -185,19 +185,29 @@ const Wrapper = styled.section`
     }
   }
   @media (max-width: 767px) {
-    .content {
-      border: 1px solid;
-      height: 40px;
-      overflow: hidden;
-      position: fixed;
-      top: 0;
+    .category-list-holder {
+      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      max-height: 200px;
+      border: 2px solid;
+      overflow: scroll;
+      background: var(--clr-primary-2);
+      * {
+        color: #fff;
+      }
+      .active {
+        background: var(--clr-yellow-dark);
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .category-list-holder {
+      grid-template-columns: repeat(2, 1fr);
+      display: grid;
+    }
+    .search-input {
       width: 100%;
-      z-index: 100000;
-      background: rgb(255, 255, 255);
-      padding: 10px;
-      transition: all 0.3s ease 0s;
-      left: 0;
-      // height: 100%;
     }
   }
 `;

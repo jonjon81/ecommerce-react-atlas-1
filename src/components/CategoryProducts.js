@@ -51,7 +51,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
     text-align: center;
   }
-  @media (min-width: 576px) {
+  @media (min-width: 320px) {
     .category {
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
