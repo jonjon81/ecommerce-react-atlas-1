@@ -189,6 +189,7 @@ const Wrapper = styled.section`
       width: 100%;
     }
     .category-list-holder {
+      padding: 0 5px;
       grid-template-columns: repeat(3, 1fr);
       display: grid;
       max-height: 150px;
@@ -199,7 +200,8 @@ const Wrapper = styled.section`
         color: #fff;
       }
       .active {
-        background: var(--clr-yellow-dark);
+        color: var(--clr-primary-2);
+        background: #fff;
       }
     }
 

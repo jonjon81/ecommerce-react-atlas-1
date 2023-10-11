@@ -27,7 +27,6 @@ const Wrapper = styled.div`
 
   .search-input {
     width: 100%;
-    margin-top: 5px;
   }
   .discount-percent.show {
     display: inline-block;
