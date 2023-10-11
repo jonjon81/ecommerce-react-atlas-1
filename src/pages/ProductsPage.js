@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   .products {
     display: grid;
     gap: 10px;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
   }
   .search-input {
     width: 100%;
