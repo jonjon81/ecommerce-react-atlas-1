@@ -170,6 +170,10 @@ const Wrapper = styled.section`
     margin: 0 auto;
     text-align: center;
   }
+  @media (max-width: 976px) {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
   @media (min-width: 576px) {
     .featured {
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
