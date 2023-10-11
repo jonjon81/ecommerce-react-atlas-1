@@ -15,6 +15,7 @@ const CartItems = () => {
         return <CartItem key={item.id} {...item} />;
       })}
       <hr />
+      <p className="free-shipping">Free shipping on orders over $50!</p>
       <div className="link-container">
         <Link to="/products" className="link-btn">
           continue shopping
@@ -44,6 +45,13 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     font-weight: 400;
     cursor: pointer;
+  }
+  .free-shipping {
+    padding: 10px;
+    font-weight: bold;
+    background: #000;
+    text-align: center;
+    color: #fff;
   }
   .clear-btn {
     background: var(--clr-black);
