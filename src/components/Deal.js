@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
 import { discountPercent } from '../utils/helpers';
 import { discountedPrice } from '../utils/helpers';
-import { FaSearch } from 'react-icons/fa';
+import { FaSistrix } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const Deal = ({ thumbnail, title, price, id, category, discountPercentage }) => {
   return (
@@ -11,7 +11,7 @@ const Deal = ({ thumbnail, title, price, id, category, discountPercentage }) => 
       <div className="container">
         <img src={thumbnail} alt={title} />
         <Link to={`/products/${category}/${id}`} className="link">
-          <FaSearch />
+          <FaSistrix />
         </Link>
       </div>
       <footer>
@@ -57,6 +57,7 @@ const Wrapper = styled.article`
       font-size: 1.25rem;
       color: var(--clr-white);
       background: var(--clr-primary-5);
+      pointer-events: none;
     }
   }
   .container:hover img {
