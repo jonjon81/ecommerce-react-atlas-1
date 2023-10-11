@@ -39,8 +39,8 @@ const Deals = () => {
       <div className="title">
         <h2>Huge Sales</h2>
         <p>Our top deals of 15%+ off</p>
-        <Link onClick={scrollTop} to="/products" className="btn light">
-          Shop now
+        <Link onClick={scrollTop} to="/top-deals" className="btn light">
+          <span>Top</span> Deals
         </Link>
       </div>
 
@@ -167,7 +167,6 @@ const Wrapper = styled.section`
   }
   .btn {
     display: block;
-    width: 148px;
     margin: 0 auto;
     text-align: center;
   }
