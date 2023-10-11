@@ -25,6 +25,7 @@ export const CartProvider = ({ children }) => {
   // add to cart
   const addToCart = (id, amount, product) => {
     dispatch({ type: ADD_TO_CART, payload: { id, amount, product } });
+    window.scrollTo(0, 0);
   };
   // remove item
   const removeItem = (id) => {
