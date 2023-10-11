@@ -21,8 +21,13 @@ const TopDealsPage = () => {
 const Wrapper = styled.div`
   .products {
     display: grid;
-    gap: 3rem 1.5rem;
-    margin: 4rem auto;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-top: 5px;
   }
   .discount-percent.show {
     display: inline-block;
@@ -36,6 +41,17 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     .products {
       grid-template-columns: 200px 1fr;
+      margin: 4rem auto;
+      gap: 3rem 1.5rem;
+    }
+
+    .products {
+      margin: 4rem auto;
+    }
+    .search-input {
+      width: auto;
+      border: 0;
+      margin-top: 0;
     }
   }
 `;

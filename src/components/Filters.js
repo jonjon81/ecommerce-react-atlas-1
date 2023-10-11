@@ -16,9 +16,9 @@ const Filters = () => {
   return (
     <Wrapper>
       <div className="content">
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className="filter-form" onSubmit={(e) => e.preventDefault()}>
           {/* search input */}
-          <div className="form-control">
+          <div className="form-control -search-bar">
             <input
               type="text"
               name="text"
@@ -64,7 +64,7 @@ const Filters = () => {
           </div>
           {/* end of brand */}
           {/* price */}
-          <div className="form-control">
+          <div className="form-control -price">
             <h5>price</h5>
             <p className="price">{formatPrice(price)}</p>
             <input type="range" name="price" onChange={updateFilters} min={min_price} max={max_price} value={price} />
@@ -96,7 +96,7 @@ const Wrapper = styled.section`
   }
   .search-input {
     padding: 0.5rem;
-    background: var(--clr-grey-10);
+    background: var(--clr-grey-8);
     border-radius: var(--radius);
     border-color: transparent;
     letter-spacing: var(--spacing);
@@ -185,10 +185,13 @@ const Wrapper = styled.section`
     }
   }
   @media (max-width: 767px) {
+    .clear-btn {
+      width: 100%;
+    }
     .category-list-holder {
       grid-template-columns: repeat(3, 1fr);
       display: grid;
-      max-height: 200px;
+      max-height: 150px;
       border: 2px solid;
       overflow: scroll;
       background: var(--clr-primary-2);
@@ -197,6 +200,21 @@ const Wrapper = styled.section`
       }
       .active {
         background: var(--clr-yellow-dark);
+      }
+    }
+
+    .filter-form {
+      display: flex;
+      flex-wrap: wrap;
+      .-brand,
+      .-price {
+        width: 50%;
+        padding: 5px;
+        margin-bottom: 0;
+      }
+      .-category,
+      .-search-bar {
+        width: 100%;
       }
     }
   }
