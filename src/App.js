@@ -12,6 +12,7 @@ import {
   Products,
   PrivateRoute,
   AuthWrapper,
+  TopDealsPage,
 } from './pages';
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="products/:category" element={<CategoryPage />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:category/:id" element={<SingleProduct />} />
+          <Route path="top-deals" element={<TopDealsPage />} />
           <Route
             path="checkout"
             element={

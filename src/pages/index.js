@@ -8,4 +8,17 @@ import Error from './ErrorPage';
 import Checkout from './CheckoutPage';
 import PrivateRoute from './PrivateRoute';
 import AuthWrapper from './AuthWrapper';
-export { Home, SingleProduct, CategoryPage, Cart, About, Error, Checkout, Products, PrivateRoute, AuthWrapper };
+import TopDealsPage from './TopDealsPage';
+export {
+  Home,
+  SingleProduct,
+  CategoryPage,
+  Cart,
+  About,
+  Error,
+  Checkout,
+  Products,
+  PrivateRoute,
+  AuthWrapper,
+  TopDealsPage,
+};
