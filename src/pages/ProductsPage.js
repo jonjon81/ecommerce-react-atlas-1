@@ -27,7 +27,6 @@ const Wrapper = styled.div`
   .search-input {
     width: 100%;
     margin-top: 5px;
-    border: 2px solid;
   }
   @media (min-width: 768px) {
     .products {
