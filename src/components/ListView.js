@@ -2,17 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
 import { discountedPrice } from '../utils/helpers';
+import { discountPercent } from '../utils/helpers';
 import { Link } from 'react-router-dom';
 const ListView = ({ products }) => {
   return (
     <Wrapper>
       {products.map((product) => {
-        const { id, thumbnail, name, price, description, category, discountPercentage } = product;
+        const { id, thumbnail, title, price, description, category, discountPercentage } = product;
         return (
           <article key={id}>
-            <img src={thumbnail} alt={name} />
+            <img src={thumbnail} alt={title} />
             <div>
-              <h4>{name}</h4>
+              <h4>{title}</h4>
+              <p className="discount-percent show">Save {discountPercent(discountPercentage)}%</p>
+
               <h5 className="price crossed-out">{formatPrice(price)}</h5>
               <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
               <p>{description.substring(0, 150)}...</p>
@@ -29,8 +32,6 @@ const ListView = ({ products }) => {
 
 const Wrapper = styled.section`
   display: grid;
-  row-gap: 3rem;
-
   img {
     width: 100%;
     display: block;
@@ -38,6 +39,13 @@ const Wrapper = styled.section`
     height: 200px;
     object-fit: contain;
     border-radius: var(--radius);
+  }
+  .discount-percent {
+    display: none;
+  }
+  article {
+    border-bottom: 1px solid var(--clr-grey-8);
+    padding: 2rem 0;
   }
   h4 {
     margin-bottom: 0.5rem;

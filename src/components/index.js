@@ -15,7 +15,9 @@ import ProductImages from './ProductImages';
 import AddToCart from './AddToCart';
 import Filters from './Filters';
 import ProductList from './ProductList';
+import TopDealsList from './TopDealsList';
 import Sort from './Sort';
+import SortDeals from './SortDeals';
 import Rating from './Rating';
 import CartContent from './CarContent';
 import PageHero from './PageHero';
@@ -38,7 +40,9 @@ export {
   AddToCart,
   Filters,
   ProductList,
+  TopDealsList,
   Sort,
+  SortDeals,
   Rating,
   CartContent,
   PageHero,

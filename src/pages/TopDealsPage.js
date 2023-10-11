@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Filters, ProductList, Sort, PageHero } from '../components';
+import { Filters, TopDealsList, SortDeals, PageHero } from '../components';
 const TopDealsPage = () => {
   return (
     <main>
@@ -9,8 +9,8 @@ const TopDealsPage = () => {
         <div className="section-center products">
           <Filters />
           <div>
-            <Sort />
-            <ProductList />
+            <SortDeals />
+            <TopDealsList />
           </div>
         </div>
       </Wrapper>
@@ -23,6 +23,15 @@ const Wrapper = styled.div`
     display: grid;
     gap: 3rem 1.5rem;
     margin: 4rem auto;
+  }
+  .discount-percent.show {
+    display: inline-block;
+    background: var(--clr-red-dark);
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: rgb(255, 255, 255);
   }
   @media (min-width: 768px) {
     .products {

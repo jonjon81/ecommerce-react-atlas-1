@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
 import { discountedPrice } from '../utils/helpers';
+import { discountPercent } from '../utils/helpers';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const Product = ({ thumbnail, title, price, id, category, discountPercentage }) => {
@@ -15,6 +16,7 @@ const Product = ({ thumbnail, title, price, id, category, discountPercentage }) 
       </div>
       <footer>
         <h5>{title}</h5>
+        <p className="discount-percent show">Save {discountPercent(discountPercentage)}%</p>
         <p className="crossed-out">{formatPrice(price)}</p>
         <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
       </footer>
@@ -26,6 +28,9 @@ const Wrapper = styled.article`
     position: relative;
     background: none;
     border-radius: var(--radius);
+  }
+  .discount-percent {
+    display: none;
   }
   img {
     width: 100%;
