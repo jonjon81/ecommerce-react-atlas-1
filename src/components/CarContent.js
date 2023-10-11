@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   .free-shipping {
     padding: 10px;
     font-weight: bold;
-    background: #000;
+    background: var(--clr-primary-7);
     text-align: center;
     color: #fff;
   }
