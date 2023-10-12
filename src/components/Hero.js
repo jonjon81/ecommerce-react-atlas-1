@@ -23,7 +23,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
@@ -253,7 +253,7 @@ const Wrapper = styled.section`
     }
     .image-wrapper {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       padding: 0;
       height: 100%;
       .content {
@@ -261,7 +261,7 @@ const Wrapper = styled.section`
         flex-direction: column;
         justify-content: center;
         width: 90vw;
-        margin: auto;
+        margin: 0 auto;
         .hero-btn {
           &.mr-20 {
             margin-right: 0;
