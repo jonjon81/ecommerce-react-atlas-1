@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-// Import css files
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useProductsContext } from '../context/products_context';
@@ -24,6 +23,32 @@ const FeaturedProducts = () => {
     slidesToShow: 5,
     slidesToScroll: 5,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 766,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   const scrollTop = () => {
@@ -74,10 +99,10 @@ const Wrapper = styled.section`
       font-size: 30px;
     }
     .slick-next {
-      right: -50px;
+      right: -18px;
     }
     .slick-prev {
-      left: -50px;
+      left: -30px;
     }
     footer {
       padding: 0 10px;
@@ -101,6 +126,27 @@ const Wrapper = styled.section`
     width: 148px;
     margin: 0 auto;
     text-align: center;
+  }
+  @media (max-width: 766px) {
+    .featured {
+      margin: 1rem auto 5rem;
+    }
+  }
+  @media (max-width: 575px) {
+    .featured {
+      margin: 1rem auto 1rem;
+      .slick-dots {
+        width: 90vw;
+        position: relative;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%);
+        height: 80px;
+      }
+    }
+    .slick-slider {
+      overflow: hidden;
+    }
   }
   @media (min-width: 576px) {
     .featured {
