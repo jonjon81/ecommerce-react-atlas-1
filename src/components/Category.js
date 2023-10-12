@@ -12,9 +12,7 @@ const Category = ({ thumbnail, title, category }) => {
     <Wrapper>
       <div className="container">
         <img src={thumbnail} alt={title} />
-        <Link onClick={scrollTop} to={`/products/${category}`} className="link">
-          <FaSistrix />
-        </Link>
+        <Link onClick={scrollTop} to={`/products/${category}`} className="link"></Link>
       </div>
       <footer>
         <Link onClick={scrollTop} to={`/products/${category}`}>
