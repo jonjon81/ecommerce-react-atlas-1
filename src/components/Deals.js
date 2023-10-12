@@ -30,7 +30,7 @@ const Deals = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
@@ -56,6 +56,7 @@ const Deals = () => {
           slidesToScroll: 1,
           arrows: false,
           dots: false,
+          autoplaySpeed: 2000,
         },
       },
     ],
