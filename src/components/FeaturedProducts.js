@@ -147,6 +147,9 @@ const Wrapper = styled.section`
         height: 80px;
       }
     }
+    .section-center {
+      width: 100vw;
+    }
     .slick-slider {
       overflow: hidden;
     }
