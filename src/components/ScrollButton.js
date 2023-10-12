@@ -48,8 +48,6 @@ const Wrapper = styled.div`
     padding: 3px;
   }
   @media (max-width: 576px) {
-    height: 15px;
-    font-size: 2rem;
     bottom: 50px;
     left: unset;
     right: 0;
