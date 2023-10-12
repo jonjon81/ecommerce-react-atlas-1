@@ -104,16 +104,12 @@ const Wrapper = styled.article`
     letter-spacing: var(--spacing);
   }
 
-  @media (max-width: 1220px) {
-
-  }
-
   @media (max-width: 576px) {
     footer {
       .crossed-out {
         font-size: 0.875rem;
+      }
     }
-
     .container {
       &:hover {
         img {

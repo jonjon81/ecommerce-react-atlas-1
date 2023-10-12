@@ -100,6 +100,7 @@ const Wrapper = styled.article`
       }
     }
     .link {
+      border: 10px solid red;
       svg {
         display: none;
       }
