@@ -125,6 +125,7 @@ const Container = styled.footer`
     padding-bottom: 3rem;
     ul {
       text-align: left;
+      padding: 10px;
     }
 }
     a {
