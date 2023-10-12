@@ -31,7 +31,9 @@ const Filters = () => {
           {/* end of search input */}
           {/* category */}
           <div className="form-control -category">
-            <h5>category</h5>
+            <h5>
+              category <span className="category-message">(scroll for additional)</span>
+            </h5>
             <div className="category-list-holder">
               {categories.map((c, index) => {
                 return (
@@ -94,6 +96,9 @@ const Wrapper = styled.section`
       max-width: 100%;
     }
   }
+  span.category-message {
+    display: none;
+  }
   .search-input {
     padding: 0.5rem;
     background: var(--clr-grey-8);
@@ -104,6 +109,10 @@ const Wrapper = styled.section`
   }
   .search-input::placeholder {
     text-transform: capitalize;
+  }
+
+  input[type='range'] {
+    width: 100%;
   }
 
   button {
@@ -236,6 +245,12 @@ const Wrapper = styled.section`
       .-category {
         color: #fff;
         padding: 5px;
+        .category-message {
+          font-size: 14px;
+          position: absolute;
+          right: 20px;
+          display: inline-block;
+        }
       }
       .price {
         color: #fff;
