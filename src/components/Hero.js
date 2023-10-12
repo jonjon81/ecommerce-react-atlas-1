@@ -25,6 +25,16 @@ const Hero = () => {
     arrows: true,
     autoplay: false,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
@@ -237,13 +247,16 @@ const Wrapper = styled.section`
     }
   }
   @media (max-width: 576px) {
+    .slider-right,
+    .slider-left {
+      display: none;
+    }
     .image-wrapper {
       display: flex;
       align-items: center;
       padding: 0;
       height: 100%;
       .content {
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
