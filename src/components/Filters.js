@@ -248,7 +248,7 @@ const Wrapper = styled.section`
         color: #fff;
         padding: 5px;
         .category-message {
-          font-size: 14px;
+          font-size: 0.875rem;
           position: absolute;
           right: 20px;
           display: inline-block;

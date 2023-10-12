@@ -49,12 +49,17 @@ const Wrapper = styled.section`
   .free-shipping {
     padding: 10px;
     font-weight: bold;
-    background: var(--clr-primary-7);
+    background: #fff;
+    border: 2px solid var(--clr-red-dark);
     text-align: center;
-    color: #fff;
+    color: var(--clr-red-dark);
   }
   .clear-btn {
     background: var(--clr-black);
+    font-size: 1rem;
+    @media (max-width: 776px) {
+      font-size: 0.875rem;
+    }
   }
 `;
 export default CartItems;

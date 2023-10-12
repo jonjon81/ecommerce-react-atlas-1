@@ -33,12 +33,14 @@ const CartItem = ({ id, image, name, price, amount, category, discountPercentage
             <h5 className="name">{name}</h5>
           </Link>
           <h5 className="price-small">
-            {formatPrice(price)} / {discountedPrice(price, discountPercentage)}{' '}
+            <span className="crossed-out">{formatPrice(price)}</span>
+            <span>/{discountedPrice(price, discountPercentage)} </span>
           </h5>
         </div>
       </div>
       <h5 className="price">
-        <span className="crossed-out">{formatPrice(price)}</span> / {discountedPrice(price, discountPercentage)}
+        <span className="crossed-out">{formatPrice(price)}</span>{' '}
+        <span>/{discountedPrice(price, discountPercentage)}</span>
       </h5>
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
       <h5 className="subtotal">{formatPrice(discountNumber * amount)}</h5>
@@ -109,6 +111,7 @@ const Wrapper = styled.article`
   }
   .price-small {
     color: var(--clr-primary-5);
+    display: flex;
   }
   .amount-btns {
     width: 75px;
@@ -148,7 +151,7 @@ const Wrapper = styled.article`
       display: none;
     }
     .price {
-      display: block;
+      display: flex;
       font-size: 1rem;
       color: var(--clr-primary-5);
       font-weight: 400;

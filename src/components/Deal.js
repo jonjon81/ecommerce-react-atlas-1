@@ -111,7 +111,7 @@ const Wrapper = styled.article`
   @media (max-width: 576px) {
     footer {
       .crossed-out {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
   }
 `;
