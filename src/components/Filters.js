@@ -201,10 +201,10 @@ const Wrapper = styled.section`
       overflow-y: scroll;
       background: var(--clr-primary-2);
       &::-webkit-scrollbar {
-        background-color: #fff;
+        background-color: var(--clr-primary-2);
       }
       &::-webkit-scrollbar-thumb {
-        background-color: var(--clr-primary-5);
+        background-color: #fff;
       }
       * {
         color: #fff;
