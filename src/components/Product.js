@@ -92,8 +92,22 @@ const Wrapper = styled.article`
   }
 
   @media (max-width: 567px) {
+    .container {
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+    }
     .link {
-      transition: none;
+      svg {
+        display: none;
+      }
+      transition: 0s;
+      opacity: 1;
+      * {
+        opacity: 1;
+      }
     }
   }
 `;

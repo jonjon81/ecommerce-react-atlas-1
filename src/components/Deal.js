@@ -114,8 +114,22 @@ const Wrapper = styled.article`
         font-size: 0.875rem;
     }
 
+    .container {
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+    }
     .link {
-      transition: none;
+      svg {
+        display: none;
+      }
+      transition: 0s;
+      opacity: 1;
+      * {
+        opacity: 1;
+      }
     }
   }
 `;
