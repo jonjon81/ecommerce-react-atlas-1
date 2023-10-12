@@ -67,6 +67,12 @@ const Wrapper = styled.div`
       grid-template-columns: 200px 1fr;
     }
   }
+
+  @media (max-width: 567px) {
+    .category-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 `;
 
 export default CategoryPage;
