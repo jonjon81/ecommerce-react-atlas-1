@@ -14,10 +14,6 @@ const CartTotals = () => {
     updatedShipFee = 0.0;
     updatedTotaAmount = formatPrice(total_amount);
   }
-
-  console.log('updatedTotaAmount carTotals.js');
-  console.log(updatedTotaAmount);
-
   return (
     <Wrapper>
       <div>
