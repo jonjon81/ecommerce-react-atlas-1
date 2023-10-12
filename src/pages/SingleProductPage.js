@@ -65,7 +65,7 @@ const SingleProductPage = () => {
           <section className="content">
             <h2>{title}</h2>
             <Rating rating={rating} reviews={reviews} />
-            <h5 className="price crossed-out">{formatPrice(price)}</h5>
+            <p className="price crossed-out">{formatPrice(price)}</p>
             <p className="new-price">{discountedPrice(price, discountPercentage)}</p>
             <p className="desc">{description}</p>
             <p className="info">
@@ -116,6 +116,7 @@ const Wrapper = styled.main`
 
   .crossed-out {
     font-size: 1.25rem;
+    margin: 0;
   }
 
   @media (min-width: 992px) {

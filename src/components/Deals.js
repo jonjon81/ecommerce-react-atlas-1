@@ -30,6 +30,33 @@ const Deals = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 766,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+        },
+      },
+    ],
   };
 
   let topDiscounts = featured.filter((product) => product.discountPercentage > 15);
@@ -170,9 +197,42 @@ const Wrapper = styled.section`
     margin: 0 auto;
     text-align: center;
   }
+  @media (max-width: 1220px) {
+    flex-direction: column;
+    padding: 0;
+    .slider-left,
+    .slider-right {
+      display: none;
+    }
+    .title {
+      min-width: unset;
+      padding-top: 2rem;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        padding-right: 0;
+      }
+      * {
+        text-align: center;
+      }
+    }
+  }
   @media (max-width: 976px) {
     max-width: 100vw;
     overflow-x: hidden;
+  }
+
+  @media (max-width: 576px) {
+    .slick-slider.slick-initialized {
+      overflow-y: hidden;
+    }
+    .featured {
+      margin: 2rem auto;
+    }
+    .btn.light {
+      padding: 1.5rem;
+      font-size: 1.5rem;
+    }
   }
   @media (min-width: 576px) {
     .featured {
