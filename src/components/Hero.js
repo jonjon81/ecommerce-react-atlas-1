@@ -23,7 +23,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
   };
 
@@ -173,6 +173,7 @@ const Wrapper = styled.section`
     background-size: cover;
     padding: 5rem;
     display: flex;
+    background-position: center;
     .content {
       padding: 3rem;
       height: max-content;
@@ -237,10 +238,21 @@ const Wrapper = styled.section`
   }
   @media (max-width: 576px) {
     .image-wrapper {
+      display: flex;
+      align-items: center;
       padding: 0;
       height: 100%;
       .content {
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .hero-btn {
+          &.mr-20 {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
       }
     }
   }

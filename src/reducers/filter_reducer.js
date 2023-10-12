@@ -63,8 +63,6 @@ const filter_reducer = (state, action) => {
     const { all_products } = state;
     const { text, category, brand, price, shipping } = state.filters;
     let tempProducts = [...all_products];
-    console.log('text');
-    console.log(text);
     if (text) {
       tempProducts = tempProducts.filter((product) => product.title.toLowerCase().includes(text.toLowerCase()));
     }
