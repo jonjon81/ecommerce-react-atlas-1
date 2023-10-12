@@ -48,7 +48,7 @@ const Wrapper = styled.article`
     width: 100%;
     height: 100%;
     transition: var(--transition);
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
     svg {
       width: 55px;
@@ -62,7 +62,7 @@ const Wrapper = styled.article`
     }
   }
   .container:hover img {
-    opacity: 1;
+    opacity: 0.5;
     object-fit: cover;
   }
   .container:hover .link {
@@ -94,7 +94,7 @@ const Wrapper = styled.article`
 
   @media (max-width: 567px) {
     .link {
-      transition: none;
+      transition: 0s;
     }
   }
 `;
