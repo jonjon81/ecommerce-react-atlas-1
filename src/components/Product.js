@@ -90,5 +90,11 @@ const Wrapper = styled.article`
       font-weight: bold;
     }
   }
+
+  @media (max-width: 567px) {
+    .link {
+      transition: none;
+    }
+  }
 `;
 export default Product;

@@ -113,6 +113,10 @@ const Wrapper = styled.article`
       .crossed-out {
         font-size: 0.875rem;
     }
+
+    .link {
+      transition: none;
+    }
   }
 `;
 export default Deal;
