@@ -14,7 +14,7 @@ const Filters = () => {
   const categories = getUniqueValues(all_products, 'category');
   const companies = getUniqueValues(all_products, 'brand');
   return (
-    <Wrapper>
+    <Wrapper className="filter-wrapper">
       <div className="content">
         <form className="filter-form" onSubmit={(e) => e.preventDefault()}>
           {/* search input */}
@@ -186,6 +186,8 @@ const Wrapper = styled.section`
     }
   }
   @media (max-width: 767px) {
+    width: 100vw;
+    margin-left: -5vw;
     .search-input {
       border-radius: 0;
     }
@@ -219,6 +221,7 @@ const Wrapper = styled.section`
       display: flex;
       flex-wrap: wrap;
       background: var(--clr-primary-2);
+      padding: 0 1rem;
       .-brand,
       .-price {
         width: 50%;
