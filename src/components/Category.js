@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaSistrix } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const scrollTop = () => {
@@ -11,7 +12,9 @@ const Category = ({ thumbnail, title, category }) => {
     <Wrapper>
       <div className="container">
         <img src={thumbnail} alt={title} />
-        <Link onClick={scrollTop} to={`/products/${category}`} className="link"></Link>
+        <Link onClick={scrollTop} to={`/products/${category}`} className="link">
+          <FaSistrix />
+        </Link>
       </div>
       <footer>
         <Link onClick={scrollTop} to={`/products/${category}`}>
@@ -45,7 +48,7 @@ const Wrapper = styled.article`
     width: 100%;
     height: 100%;
     transition: var(--transition);
-    opacity: 0;
+    opacity: 1;
     cursor: pointer;
     svg {
       width: 55px;
@@ -59,7 +62,7 @@ const Wrapper = styled.article`
     }
   }
   .container:hover img {
-    opacity: 0.5;
+    opacity: 1;
     object-fit: cover;
   }
   .container:hover .link {
