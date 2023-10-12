@@ -6,71 +6,75 @@ const Footer = () => {
     <Container>
       <div className="footer-container">
         <ul>
+          <h5 className="footer-header">Order & Purchases</h5>
           <li>
-            <a href="/">Lorem ipsum</a>
+            <a href="/">Check Order Status</a>
           </li>
           <li>
-            <a href="/">Lorem</a>
+            <a href="/">Shipping, Delivery & Pickup</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum dolor</a>
+            <a href="/">Returns & Exchanges</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum</a>
+            <a href="/">Price Match Guarantee</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="/">Lorem ipsum</a>
-          </li>
-          <li>
-            <a href="/">Lorem</a>
-          </li>
-          <li>
-            <a href="/">Lorem ipsum dolor</a>
-          </li>
-          <li>
-            <a href="/">Lorem ipsum dolor</a>
-          </li>
-          <li>
-            <a href="/">lorem</a>
+            <a href="/">Product Recalls</a>
           </li>
         </ul>
         <ul>
+          <h5 className="footer-header">About Atlas Ecommerce</h5>
           <li>
-            <a href="/">Lorem ipsum</a>
+            <a href="/">Corporate Information</a>
           </li>
           <li>
-            <a href="/">Lorem</a>
+            <a href="/">Careers</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum dolor</a>
+            <a href="/">Corporate Responsibility</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum</a>
+            <a href="/">Sustainability</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum</a>
+            <a href="/">Customer Service</a>
           </li>
         </ul>
         <ul>
+          <h5 className="footer-header">Partnerships</h5>
           <li>
-            <a href="/">Lorem ipsum</a>
+            <a href="/">Affiliate Program</a>
           </li>
           <li>
-            <a href="/">Lorem</a>
+            <a href="/">Advertise with Us</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum dolor</a>
+            <a href="/">Developers</a>
           </li>
           <li>
-            <a href="/">Lorem ipsum dolor</a>
+            <a href="/">Atlas Ecommerce Health</a>
           </li>
           <li>
-            <a href="/">lorem</a>
+            <a href="/">Gift Cards</a>
+          </li>
+        </ul>
+        <ul>
+          <h5 className="footer-header">Support & Services</h5>
+          <li>
+            <a href="/">Visit our Support Center</a>
+          </li>
+          <li>
+            <a href="/">Shop with an Expert</a>
+          </li>
+          <li>
+            <a href="/">Manage an Appointment</a>
+          </li>
+          <li>
+            <a href="/">Protection & Support Plans</a>
+          </li>
+          <li>
+            <a href="/">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -105,6 +109,12 @@ const Container = styled.footer`
     font-weight: 400;
     text-transform: none;
     line-height: 1.25;
+  }
+
+  .footer-header {
+    padding: 0;
+    margin: 0 0 10px;
+    font-weight: bold;
   }
 
   .footer-container {

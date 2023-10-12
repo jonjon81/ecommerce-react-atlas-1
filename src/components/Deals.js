@@ -30,6 +30,8 @@ const Deals = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: true,
+    // autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1220,
@@ -182,10 +184,12 @@ const Wrapper = styled.section`
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-line-clamp: 2;
         line-clamp: 2;
         height: 40px;
         -webkit-box-orient: vertical;
+        display: flex;
+        align-items: center;
       }
     }
     img {
@@ -200,6 +204,7 @@ const Wrapper = styled.section`
   @media (max-width: 1220px) {
     flex-direction: column;
     padding: 0;
+    border-radius: 0;
     .slider-left,
     .slider-right {
       display: none;

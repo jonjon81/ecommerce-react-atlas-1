@@ -26,7 +26,7 @@ const ScrollButton = () => {
   window.addEventListener('scroll', toggleVisible);
 
   return (
-    <Wrapper>
+    <Wrapper className="scroll-button">
       <FaArrowUp onClick={scrollToTop} style={{ display: visible ? 'inline' : 'none' }} />
     </Wrapper>
   );
@@ -46,6 +46,13 @@ const Wrapper = styled.div`
   svg {
     background: var(--clr-primary-5);
     padding: 3px;
+  }
+  @media (max-width: 576px) {
+    height: 15px;
+    font-size: 2rem;
+    bottom: 50px;
+    left: unset;
+    right: 0;
   }
 `;
 

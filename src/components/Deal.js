@@ -103,5 +103,16 @@ const Wrapper = styled.article`
   footer p {
     letter-spacing: var(--spacing);
   }
+
+  @media (max-width: 1220px) {
+
+  }
+
+  @media (max-width: 576px) {
+    footer {
+      .crossed-out {
+        font-size: 14px;
+    }
+  }
 `;
 export default Deal;

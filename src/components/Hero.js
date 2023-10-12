@@ -23,7 +23,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
@@ -260,6 +260,8 @@ const Wrapper = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 90vw;
+        margin: auto;
         .hero-btn {
           &.mr-20 {
             margin-right: 0;

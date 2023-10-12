@@ -23,6 +23,8 @@ const FeaturedProducts = () => {
     slidesToShow: 5,
     slidesToScroll: 5,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1220,
@@ -46,6 +48,7 @@ const FeaturedProducts = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
+          dots: false,
         },
       },
     ],
