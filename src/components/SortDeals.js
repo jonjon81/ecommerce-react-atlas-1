@@ -52,6 +52,13 @@ const Wrapper = styled.section`
   @media (min-width: 768px) {
     column-gap: 2rem;
   }
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: -5vw;
+    padding: 0 10px;
+  }
+
   p {
     text-transform: capitalize;
     margin-bottom: 0;

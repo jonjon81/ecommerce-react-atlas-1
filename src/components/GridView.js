@@ -4,7 +4,7 @@ import Product from './Product';
 
 const GridView = ({ products }) => {
   return (
-    <Wrapper>
+    <Wrapper className="grid-view-wrapper">
       <div className="products-container">
         {products.map((product) => {
           return <Product key={product.id} {...product} />;
@@ -22,6 +22,11 @@ const Wrapper = styled.section`
   .products-container {
     display: grid;
     gap: 2rem 1.5rem;
+  }
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: -5vw;
+    padding: 0 10px;
   }
 
   @media (min-width: 320px) {

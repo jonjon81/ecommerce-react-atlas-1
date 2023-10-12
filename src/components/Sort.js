@@ -35,6 +35,13 @@ const Wrapper = styled.section`
   align-items: center;
   margin-bottom: 2rem;
   column-gap: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: -5vw;
+    padding: 0 10px;
+  }
+
   @media (max-width: 576px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -47,6 +54,7 @@ const Wrapper = styled.section`
       margin-right: 0.5rem;
     }
   }
+
   @media (min-width: 768px) {
     column-gap: 2rem;
   }

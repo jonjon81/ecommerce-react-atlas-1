@@ -89,6 +89,20 @@ const Wrapper = styled.section`
       padding-left: 1rem;
     }
   }
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: -5vw;
+    padding: 0 10px;
+
+    .article-content {
+      width: 60%;
+      max-width: unset;
+    }
+
+    img {
+      width: 40%;
+    }
+  }
   @media (min-width: 320px) {
     article {
       display: flex;

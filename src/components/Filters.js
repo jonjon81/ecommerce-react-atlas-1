@@ -202,6 +202,8 @@ const Wrapper = styled.section`
     }
     .clear-btn {
       width: 100%;
+      border-radius: 0;
+      margin: 0;
     }
     .category-list-holder {
       padding: 0 5px;
@@ -262,6 +264,7 @@ const Wrapper = styled.section`
     .category-list-holder {
       grid-template-columns: repeat(2, 1fr);
       display: grid;
+      max-height: 100px;
     }
     .search-input {
       width: 100%;
