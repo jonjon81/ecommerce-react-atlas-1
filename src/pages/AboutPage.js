@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { PageHero } from '../components';
 import laptops from '../assets/categories/laptops.jpeg';
+import { FaCog } from 'react-icons/fa';
+
 const AboutPage = () => {
   return (
     <main>
@@ -14,13 +16,39 @@ const AboutPage = () => {
             <div className="underline"></div>
           </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusantium sapiente tempora sed dolore
-            esse deserunt eaque excepturi, delectus error accusamus vel eligendi, omnis beatae. Quisquam, dicta. Eos
-            quod quisquam esse recusandae vitae neque dolore, obcaecati incidunt sequi blanditiis est exercitationem
-            molestiae delectus saepe odio eligendi modi porro eaque in libero minus unde sapiente consectetur
-            architecto. Ullam rerum, nemo iste ex, eaque perspiciatis nisi, eum totam velit saepe sed quos similique
-            amet. Ex, voluptate accusamus nesciunt totam vitae esse iste.
+            This project was built for the purpose of showing off my abilities to make a fully functional and attractive
+            application. Please try it out on both desktop and mobile and let me know your thoughts and if you run into
+            any issues. If you think I'd be a good addition to your team please reach out! I am currently just looking
+            for remote opportunities.
           </p>
+          <p>
+            <strong>Resume</strong>
+          </p>
+          <p>
+            {' '}
+            <strong>Contact:</strong>{' '}
+            <a href="mailto:jsa@jonatlas.com">
+              E-mail <FaCog />
+            </a>{' '}
+            /
+            <a href="https://www.linkedin.com/in/jonatlas">
+              LinkedIn <FaCog />
+            </a>
+          </p>
+          <br />
+          <h4 className="key-features">Key Features</h4>
+          <ul>
+            <li>SPA built with React</li>
+            <li>Fully responsive</li>
+            <li>Integrated with Stripe for checkout</li>
+            <li>Depoyed using Netlify and www.Jon-Atlas.com</li>
+            <li>Email on homepage for sending using Formspree</li>
+            <li>Login integration using oAuth</li>
+            <li>Used Vite</li>
+            <li>Used JSON data from this</li>
+            <li>Styled components</li>
+            <li>Font Awesome</li>
+          </ul>
         </article>
       </Wrapper>
     </main>
@@ -38,7 +66,6 @@ const Wrapper = styled.section`
   }
   p {
     line-height: 2;
-    max-width: 45em;
     margin: 0 auto;
     margin-top: 2rem;
     color: var(--clr-grey-5);
