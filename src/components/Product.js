@@ -5,12 +5,15 @@ import { discountedPrice } from '../utils/helpers';
 import { discountPercent } from '../utils/helpers';
 import { FaSistrix } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
 const Product = ({ thumbnail, title, price, id, category, discountPercentage }) => {
   return (
     <Wrapper>
       <div className="container">
         <img src={thumbnail} alt={title} />
-        <Link to={`/products/${category}/${id}`} className="link">
+        <Link onClick={scrollTop} to={`/products/${category}/${id}`} className="link">
           <FaSistrix />
         </Link>
       </div>
