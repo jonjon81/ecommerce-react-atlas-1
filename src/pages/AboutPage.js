@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { PageHero } from '../components';
 import laptops from '../assets/categories/laptops.jpeg';
-import { FaMailBulk, FaLinkedin, FaFileCsv } from 'react-icons/fa';
+import { FaMailBulk, FaLinkedin, FaFileCsv, FaReact, FaCss3, FaHtml5, FaJs, FaNodeJs } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
@@ -44,7 +44,24 @@ const AboutPage = () => {
           <br />
           <h4 className="key-features">Key Features</h4>
           <ul>
-            <li>Tech stack: React / Node / HTML / CSS / Javascript</li>
+            <li className="tech-stack">
+              Tech stack:{' '}
+              <a href="">
+                <FaReact />
+              </a>{' '}
+              <a href="#">
+                <FaNodeJs />
+              </a>{' '}
+              <a href="#">
+                <FaHtml5 />{' '}
+              </a>
+              <a href="#">
+                <FaCss3 />
+              </a>{' '}
+              <a href="#">
+                <FaJs />
+              </a>
+            </li>
             <li>Fully responsive</li>
             <li>Integrated with Stripe for checkout</li>
             <li>Depoyed using Netlify and www.Jon-Atlas.com</li>
@@ -85,7 +102,8 @@ const Wrapper = styled.section`
     object-fit: cover;
   }
 
-  .contact {
+  .contact,
+  .tech-stack {
     display: flex;
     align-items: center;
     a {
