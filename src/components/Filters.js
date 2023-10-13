@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useFilterContext } from '../context/filter_context';
 import { getUniqueValues, formatPrice } from '../utils/helpers';
@@ -12,9 +12,10 @@ const Filters = () => {
     clearFilters,
   } = useFilterContext();
 
-  let controlContainer = document.querySelector('.control-container');
-  const toggleFilter = () => {
-    controlContainer.classList.toggle('active');
+  const [isActive, setActive] = useState('false');
+
+  const handleFilterToggle = () => {
+    setActive(!isActive);
   };
 
   const categories = getUniqueValues(all_products, 'category');
@@ -36,15 +37,17 @@ const Filters = () => {
                 className="search-input"
               />
             </div>
-            <button onClick={toggleFilter} className="-cog">
+            <button onClick={handleFilterToggle} className="-cog">
               <FaCog />
             </button>
           </div>
           {/* end of search input */}
           {/* category */}
-          <div className="control-container">
+          <div className={`control-container ${isActive ? null : 'active'}`}>
             <div className="form-control -category">
-              <h5>category </h5>
+              <h5>
+                category <span className="category-message">(Scroll down for more)</span>
+              </h5>
               <div className="category-list-holder">
                 {categories.map((c, index) => {
                   return (
@@ -298,10 +301,10 @@ const Wrapper = styled.section`
         overflow: hidden;
         width: 100%;
         .category-message {
-          font-size: 0.875rem;
-          position: absolute;
-          right: 20px;
-          display: inline-block;
+          font-size: 0.75rem;
+          display: inline;
+          text-transform: lowercase;
+          font-family: auto;
         }
       }
       .price {
