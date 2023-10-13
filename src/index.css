@@ -258,3 +258,9 @@ section.sc-hzhJZQ.guhiTb span.product-item {
 .slick-slider {
   max-width: 100vw;
 }
+
+@media (max-width: 567px) {
+  section {
+    padding-bottom: 0;
+  }
+}

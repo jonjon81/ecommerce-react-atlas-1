@@ -45,11 +45,15 @@ const Wrapper = styled.section`
       height: 150px;
     }
   }
+
   .btn {
     display: block;
     width: 148px;
     margin: 0 auto;
     text-align: center;
+  }
+  @media (max-width: 992px) {
+    padding-bottom: 0;
   }
   @media (min-width: 320px) {
     .category {
