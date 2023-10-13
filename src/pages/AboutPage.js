@@ -2,7 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { PageHero } from '../components';
 import laptops from '../assets/categories/laptops.jpeg';
-import { FaMailBulk, FaLinkedin, FaFileCsv, FaReact, FaCss3, FaHtml5, FaJs, FaNodeJs } from 'react-icons/fa';
+import {
+  FaMailBulk,
+  FaLinkedin,
+  FaFileCsv,
+  FaReact,
+  FaCss3,
+  FaHtml5,
+  FaJs,
+  FaNodeJs,
+  FaStripe,
+  FaWpforms,
+  FaAngleRight,
+} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
@@ -13,14 +25,14 @@ const AboutPage = () => {
         <img src={laptops} alt="nice desk" />
         <article>
           <div className="title">
-            <h2>our story</h2>
+            <h2>my story</h2>
             <div className="underline"></div>
           </div>
           <p>
-            This ecommerce project was built for the purpose of showing off my abilities to make a fully functional and
-            attractive application. Please try it out on both desktop and mobile and let me know your thoughts and if
-            you run into any issues. If you think I'd be a good addition to your team please reach out! I am currently
-            looking for FT remote opportunities.
+            This ecommerce React project was built for the purpose of showing off my abilities to make a fully
+            functional and attractive application. Please try it out on both desktop and mobile and let me know your
+            thoughts and if you run into any issues. If you think I'd be a good addition to your team please reach out!
+            I am currently looking for FT remote opportunities.
           </p>
 
           <div className="contact-container">
@@ -43,7 +55,7 @@ const AboutPage = () => {
           </div>
           <br />
           <h4 className="key-features">Key Features</h4>
-          <ul>
+          <ul className="normal-list">
             <li className="tech-stack">
               Tech stack:{' '}
               <a target="_blank" rel="noreferrer" href="https://react.dev/">
@@ -62,21 +74,76 @@ const AboutPage = () => {
                 <FaJs />
               </a>
             </li>
-            <li>Fully responsive</li>
-            <li>Integrated with Stripe for checkout</li>
-            <li>Depoyed using Netlify and www.Jon-Atlas.com</li>
-            <li>Email on homepage for sending using Formspree</li>
-            <li>Login integration using oAuth</li>
-            <li>Used Vite</li>
-            <li>Used JSON data from this</li>
-            <li>Styled components</li>
-            <li>Font Awesome</li>
-            <li>Carousels using slick slider</li>
-            <li>Git and github dekstop for version control</li>
+            <li>
+              Fully responsive <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Integrated with Stripe for checkout <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Depoyed using Netlify and www.Jon-Atlas.com{' '}
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Email on homepage for sending using Formspree <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Login integration using oAuth <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Used Vite <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Used JSON data from this <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Styled components <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Font Awesome <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Carousels using slick slider <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
+            <li>
+              Git and github dekstop for version control <FaAngleRight className="angle-right" />
+              <a href="https://stripe.com/">
+                <FaStripe />
+              </a>
+            </li>
           </ul>
           <br />
           <h5>Important features to test out!</h5>
-          <ul>
+          <ul className="normal-list">
             <li>Filter your items</li>
             <li>Top deals page with 15%+ deals</li>
             <li>Cart options</li>
@@ -92,6 +159,20 @@ const AboutPage = () => {
   );
 };
 const Wrapper = styled.section`
+  ul.normal-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    li {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      font-size: 1.5rem;
+      &.angle-right {
+        font-size: 1rem;
+      }
+    }
+  }
   display: grid;
   gap: 4rem;
   img {
