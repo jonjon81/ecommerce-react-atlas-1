@@ -46,19 +46,19 @@ const AboutPage = () => {
           <ul>
             <li className="tech-stack">
               Tech stack:{' '}
-              <a href="">
+              <a target="_blank" rel="noreferrer" href="https://react.dev/">
                 <FaReact />
               </a>{' '}
-              <a href="#">
+              <a target="_blank" rel="noreferrer" href="https://nodejs.org/#">
                 <FaNodeJs />
               </a>{' '}
-              <a href="#">
+              <a target="_blank" rel="noreferrer" href="https://html.com/html5/">
                 <FaHtml5 />{' '}
               </a>
-              <a href="#">
+              <a target="_blank" rel="noreferrer" href="https://www.css3.com/">
                 <FaCss3 />
               </a>{' '}
-              <a href="#">
+              <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
                 <FaJs />
               </a>
             </li>
@@ -77,13 +77,13 @@ const AboutPage = () => {
           <br />
           <h5>Important features to test out!</h5>
           <ul>
-            <li>Free shipping for orders more than 50%</li>
             <li>Filter your items</li>
             <li>Top deals page with 15%+ deals</li>
             <li>Cart options</li>
             <li>Filter dropdown on mobile</li>
             <li>Login using new username/password or through LinkedIn/Gmail</li>
             <li>Checkout (after logging in) and complete your order with the test CC number.</li>
+            <li>Free shipping for orders more than 50%</li>
             <li>Fill out the form on the homepage</li>
           </ul>
         </article>
