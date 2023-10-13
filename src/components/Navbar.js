@@ -7,9 +7,12 @@ import { links } from '../utils/constants';
 import CartButtons from './CartButtons';
 import { useProductsContext } from '../context/products_context';
 import { useUserContext } from '../context/user_context';
+import { useFilterContext } from '../context/filter_context';
+
 const Nav = () => {
   const { openSidebar } = useProductsContext();
   const { myUser } = useUserContext();
+  const { clearFilters } = useFilterContext();
   return (
     <NavContainer>
       <div className="nav-center">
@@ -26,7 +29,9 @@ const Nav = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <Link onClick={clearFilters} to={url}>
+                  {text}
+                </Link>
               </li>
             );
           })}
