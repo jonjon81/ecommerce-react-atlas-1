@@ -24,7 +24,7 @@ const Footer = () => {
           </li>
         </ul>
         <ul>
-          <h5 className="footer-header">About Atlas Ecommerce</h5>
+          <h5 className="footer-header">About AE</h5>
           <li>
             <a href="/">Corporate Information</a>
           </li>
@@ -140,6 +140,7 @@ const Container = styled.footer`
     flex-direction: column;
   }
   @media (max-width: 767px) {
+    padding: 2rem 1rem;
     .footer-container {
       flex-wrap: wrap;
       ul {
