@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { PageHero } from '../components';
 import laptops from '../assets/categories/laptops.jpeg';
 import { FaMailBulk, FaLinkedin, FaFileCsv } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
   return (
@@ -35,9 +36,9 @@ const AboutPage = () => {
             </p>
             <p className="contact">
               <strong>Resume:</strong>{' '}
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonatlas">
+              <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
                 <FaFileCsv />
-              </a>
+              </Link>
             </p>
           </div>
           <br />
@@ -54,6 +55,7 @@ const AboutPage = () => {
             <li>Styled components</li>
             <li>Font Awesome</li>
             <li>Carousels using slick slider</li>
+            <li>Git and github dekstop for version control</li>
           </ul>
           <br />
           <h5>Important features to test out!</h5>
