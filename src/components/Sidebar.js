@@ -7,10 +7,18 @@ import { links } from '../utils/constants';
 import styled from 'styled-components';
 import CartButtons from './CartButtons';
 import { useUserContext } from '../context/user_context';
+import { useFilterContext } from '../context/filter_context';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
   const { myUser } = useUserContext();
+  const { clearFilters } = useFilterContext();
+
+  function doubleFunction() {
+    clearFilters();
+    closeSidebar();
+  }
+
   return (
     <SidebarContainer>
       <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
@@ -24,7 +32,7 @@ const Sidebar = () => {
           {links.map(({ id, text, url }) => {
             return (
               <li key={id}>
-                <Link to={url} onClick={closeSidebar}>
+                <Link to={url} onClick={doubleFunction}>
                   {text}
                 </Link>
               </li>
