@@ -206,6 +206,9 @@ const Wrapper = styled.section`
       display: flex;
       align-items: center;
       padding-bottom: 10px;
+      > svg {
+        margin: 0 10px;
+      }
     }
 
     &.list-item {
