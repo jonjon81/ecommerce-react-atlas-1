@@ -25,6 +25,8 @@ import {
   FaDatabase,
 } from 'react-icons/fa';
 import { BsFiletypeJson } from 'react-icons/bs';
+import { GiHook, GiMatterStates } from 'react-icons/gi';
+
 import { SiStylelint, SiVite } from 'react-icons/si';
 
 import { Link } from 'react-router-dom';
@@ -97,6 +99,18 @@ const AboutPage = () => {
                 <FaMobileAlt />
               </a>
               <FaAngleRight className="angle-right" /> Fully responsive
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://react.dev/reference/react">
+                <GiHook />
+              </a>
+              <FaAngleRight className="angle-right" /> React hooks
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://react.dev/learn/scaling-up-with-reducer-and-context">
+                <GiMatterStates />
+              </a>
+              <FaAngleRight className="angle-right" /> React state management with context and reducers
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://formspree.io/">
@@ -192,6 +206,7 @@ const AboutPage = () => {
             <li>Free shipping for orders more than 50%</li>
             <li>Fill out the form on the homepage and I'll receive an email</li>
             <li>Scroll top arrow for longer pages</li>
+            <li>Gallery modal popup on single product pages</li>
           </ul>
         </article>
       </Wrapper>
