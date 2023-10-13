@@ -14,7 +14,19 @@ import {
   FaStripe,
   FaWpforms,
   FaAngleRight,
+  FaMobileAlt,
+  FaSmile,
+  FaRegistered,
+  FaGit,
+  FaSlidersH,
+  FaRoute,
+  FaGithubAlt,
+  FaNpm,
+  FaDatabase,
 } from 'react-icons/fa';
+import { BsFiletypeJson } from 'react-icons/bs';
+import { SiStylelint, SiVite } from 'react-icons/si';
+
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
@@ -37,121 +49,149 @@ const AboutPage = () => {
 
           <div className="contact-container">
             <p className="contact">
-              {' '}
-              <strong>Contact:</strong>{' '}
+              <strong>Contact:</strong>
               <a target="_blank" rel="noreferrer" href="mailto:jsa@jonatlas.com">
                 <FaMailBulk />
-              </a>{' '}
+              </a>
               <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonatlas">
                 <FaLinkedin />
               </a>
             </p>
             <p className="contact">
-              <strong>Resume:</strong>{' '}
+              <strong>Resume:</strong>
               <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
                 <FaFileCsv />
               </Link>
             </p>
           </div>
           <br />
-          <h4 className="key-features">Key Features</h4>
+          <h4 className="key-features">Key features / tools </h4>
           <ul className="normal-list">
             <li className="tech-stack">
-              Tech stack:{' '}
+              Tech stack:
               <a target="_blank" rel="noreferrer" href="https://react.dev/">
                 <FaReact />
-              </a>{' '}
+              </a>
               <a target="_blank" rel="noreferrer" href="https://nodejs.org/#">
                 <FaNodeJs />
-              </a>{' '}
+              </a>
               <a target="_blank" rel="noreferrer" href="https://html.com/html5/">
-                <FaHtml5 />{' '}
+                <FaHtml5 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://www.css3.com/">
                 <FaCss3 />
-              </a>{' '}
+              </a>
               <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
                 <FaJs />
               </a>
-            </li>
-            <li>
-              Fully responsive <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/">
+                <FaNpm />
               </a>
             </li>
             <li>
-              Integrated with Stripe for checkout <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+              >
+                <FaMobileAlt />
               </a>
+              <FaAngleRight className="angle-right" /> Fully responsive
             </li>
             <li>
-              Depoyed using Netlify and www.Jon-Atlas.com{' '}
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://formspree.io/">
+                <FaWpforms />
               </a>
+              <FaAngleRight className="angle-right" /> Sign up form on homepage using Formspree
             </li>
             <li>
-              Email on homepage for sending using Formspree <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
+              <a target="_blank" rel="noreferrer" href="https://stripe.com/">
                 <FaStripe />
               </a>
+              <FaAngleRight className="angle-right" /> Integrated with Stripe for full checkout
             </li>
             <li>
-              Login integration using oAuth <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://www.netlify.com/">
+                <FaSmile />
               </a>
+              <FaAngleRight className="angle-right" /> Depoyed using Netlify and www.Jon-Atlas.com
             </li>
             <li>
-              Used Vite <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://auth0.com/">
+                <FaRegistered />
               </a>
+              <FaAngleRight className="angle-right" /> Login/sign-up integration using Auth0
             </li>
             <li>
-              Used JSON data from this <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://vitejs.dev/guide/">
+                <SiVite />
               </a>
+              <FaAngleRight className="angle-right" /> Used Vite for rapid development
             </li>
             <li>
-              Styled components <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://github.com/">
+                <FaGit />
               </a>
+              <FaAngleRight className="angle-right" /> Git
+            </li>
+
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://desktop.github.com/">
+                <FaGithubAlt />
+              </a>
+              <FaAngleRight className="angle-right" /> Github desktop for version control
             </li>
             <li>
-              Font Awesome <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://dummyjson.com/products?limit=100">
+                <BsFiletypeJson />
               </a>
+              <FaAngleRight className="angle-right" /> Used dummyjson.com for all the product data
             </li>
             <li>
-              Carousels using slick slider <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://styled-components.com/">
+                <SiStylelint />
               </a>
+              <FaAngleRight className="angle-right" /> Styled components for styling in each component
             </li>
             <li>
-              Git and github dekstop for version control <FaAngleRight className="angle-right" />
-              <a href="https://stripe.com/">
-                <FaStripe />
+              <a target="_blank" rel="noreferrer" href="https://react-icons.github.io/react-icons/icons">
+                <FaReact />
               </a>
+              <FaAngleRight className="angle-right" /> React Icons
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/react-slick">
+                <FaSlidersH />
+              </a>
+              <FaAngleRight className="angle-right" /> Carousels using Slick Sider
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://reactrouter.com/en/main">
+                <FaRoute />
+              </a>
+              <FaAngleRight className="angle-right" /> React Router
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/axios">
+                <FaDatabase />
+              </a>
+              <FaAngleRight className="angle-right" /> Axios for communicating with API
             </li>
           </ul>
           <br />
           <h5>Important features to test out!</h5>
-          <ul className="normal-list">
-            <li>Filter your items</li>
+          <ul className="normal-list list-item">
+            <li>Filter product data in many ways</li>
+            <li>Search product names</li>
             <li>Top deals page with 15%+ deals</li>
-            <li>Cart options</li>
+            <li>Cart options - change item amount, delete, clear cart</li>
+            <li>3 carousels on homepage</li>
             <li>Filter dropdown on mobile</li>
             <li>Login using new username/password or through LinkedIn/Gmail</li>
-            <li>Checkout (after logging in) and complete your order with the test CC number.</li>
+            <li>Checkout (after logging in) and complete your order with the test CC number</li>
             <li>Free shipping for orders more than 50%</li>
-            <li>Fill out the form on the homepage</li>
+            <li>Fill out the form on the homepage and I'll receive an email</li>
+            <li>Scroll top arrow for longer pages</li>
           </ul>
         </article>
       </Wrapper>
@@ -165,11 +205,22 @@ const Wrapper = styled.section`
     li {
       display: flex;
       align-items: center;
+      padding-bottom: 10px;
+    }
+
+    &.list-item li {
+      display: list-item;
     }
     svg {
       font-size: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--clr-primary-5);
+      &:hover {
+        color: #000;
+      }
       &.angle-right {
         font-size: 1rem;
+        color: #000;
       }
     }
   }
