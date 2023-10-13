@@ -43,8 +43,8 @@ const AboutPage = () => {
           <p>
             This ecommerce React project was built for the purpose of showing off my abilities to make a fully
             functional and attractive application. Please try it out on both desktop and mobile and let me know your
-            thoughts and if you run into any issues. If you think I'd be a good addition to your team please reach out!
-            I am currently looking for FT remote opportunities.
+            thoughts or if you run into any issues. If you think I'd be a good addition to your team please reach out! I
+            am currently looking for FT remote opportunities.
           </p>
 
           <div className="contact-container">
@@ -208,8 +208,11 @@ const Wrapper = styled.section`
       padding-bottom: 10px;
     }
 
-    &.list-item li {
-      display: list-item;
+    &.list-item {
+      padding-left: 40px;
+      li {
+        display: list-item;
+      }
     }
     svg {
       font-size: 1.5rem;
