@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useFilterContext } from '../context/filter_context';
 import { getUniqueValues, formatPrice } from '../utils/helpers';
+import { FaCog } from 'react-icons/fa';
 
 const Filters = () => {
   const {
@@ -11,6 +12,11 @@ const Filters = () => {
     clearFilters,
   } = useFilterContext();
 
+  let controlContainer = document.querySelector('.control-container');
+  const toggleFilter = () => {
+    controlContainer.classList.toggle('active');
+  };
+
   const categories = getUniqueValues(all_products, 'category');
   const companies = getUniqueValues(all_products, 'brand');
   return (
@@ -18,64 +24,70 @@ const Filters = () => {
       <div className="content">
         <form className="filter-form" onSubmit={(e) => e.preventDefault()}>
           {/* search input */}
-          <div className="form-control -search-bar">
-            <input
-              type="text"
-              name="text"
-              value={text}
-              placeholder="search"
-              onChange={updateFilters}
-              className="search-input"
-            />
+          <div className="search-cog">
+            {' '}
+            <div className="form-control -search-bar">
+              <input
+                type="text"
+                name="text"
+                value={text}
+                placeholder="search"
+                onChange={updateFilters}
+                className="search-input"
+              />
+            </div>
+            <button onClick={toggleFilter} className="-cog">
+              <FaCog />
+            </button>
           </div>
           {/* end of search input */}
           {/* category */}
-          <div className="form-control -category">
-            <h5>
-              category <span className="category-message">(scroll for additional)</span>
-            </h5>
-            <div className="category-list-holder">
-              {categories.map((c, index) => {
-                return (
-                  <button
-                    key={index}
-                    onClick={updateFilters}
-                    type="button"
-                    name="category"
-                    className={`${category === c.toLowerCase() ? 'active' : null}`}
-                  >
-                    {c}
-                  </button>
-                );
-              })}
+          <div className="control-container">
+            <div className="form-control -category">
+              <h5>category </h5>
+              <div className="category-list-holder">
+                {categories.map((c, index) => {
+                  return (
+                    <button
+                      key={index}
+                      onClick={updateFilters}
+                      type="button"
+                      name="category"
+                      className={`${category === c.toLowerCase() ? 'active' : null}`}
+                    >
+                      {c}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
+            {/* end of category */}
+            {/* brand */}
+            <div className="form-control -brand">
+              <h5>brand</h5>
+              <select name="brand" value={brand} onChange={updateFilters} className="brand">
+                {companies.map((c, index) => {
+                  return (
+                    <option key={index} value={c}>
+                      {c}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            {/* end of brand */}
+            {/* price */}
+            <div className="form-control -price">
+              <h5>price</h5>
+              <p className="price">{formatPrice(price)}</p>
+              <input type="range" name="price" onChange={updateFilters} min={min_price} max={max_price} value={price} />
+            </div>
+            {/* end of price */}
+            <button type="button" className="clear-btn" onClick={clearFilters}>
+              clear filters
+            </button>
           </div>
-          {/* end of category */}
-          {/* brand */}
-          <div className="form-control -brand">
-            <h5>brand</h5>
-            <select name="brand" value={brand} onChange={updateFilters} className="brand">
-              {companies.map((c, index) => {
-                return (
-                  <option key={index} value={c}>
-                    {c}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-          {/* end of brand */}
-          {/* price */}
-          <div className="form-control -price">
-            <h5>price</h5>
-            <p className="price">{formatPrice(price)}</p>
-            <input type="range" name="price" onChange={updateFilters} min={min_price} max={max_price} value={price} />
-          </div>
-          {/* end of price */}
         </form>
-        <button type="button" className="clear-btn" onClick={clearFilters}>
-          clear filters
-        </button>
       </div>
     </Wrapper>
   );
@@ -188,6 +200,33 @@ const Wrapper = styled.section`
     padding: 0.5rem;
     border-radius: var(--radius);
   }
+  .search-cog {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    .-cog {
+      display: none;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    .-search-bar {
+      width: 200px;
+      input {
+        width: 100%;
+      }
+    }
+    .control-container {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      height: 100%;
+      position: relative;
+      top: 0;
+      display: none;
+    }
+  }
   @media (min-width: 768px) {
     .content {
       position: sticky;
@@ -209,7 +248,6 @@ const Wrapper = styled.section`
       padding: 0 5px;
       grid-template-columns: repeat(3, 1fr);
       display: grid;
-      max-height: 150px;
       border: 2px solid;
       overflow-y: scroll;
       background: var(--clr-primary-2);
@@ -228,6 +266,21 @@ const Wrapper = styled.section`
       }
     }
 
+    .search-cog {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      .-cog {
+        display: flex;
+        padding: 1rem;
+      }
+      .-search-bar {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
     .filter-form {
       display: flex;
       flex-wrap: wrap;
@@ -236,17 +289,13 @@ const Wrapper = styled.section`
       .-brand,
       .-price {
         width: 50%;
-        padding: 5px;
-        margin-bottom: 0;
+        margin-bottom: 20px;
         color: #fff;
-      }
-      .-category,
-      .-search-bar {
-        width: 100%;
       }
       .-category {
-        color: #fff;
-        padding: 5px;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        width: 100%;
         .category-message {
           font-size: 0.875rem;
           position: absolute;
@@ -258,13 +307,28 @@ const Wrapper = styled.section`
         color: #fff;
       }
     }
+    .control-container {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 0;
+      &.active {
+        display: flex;
+      }
+      .form-control {
+        width: 100%;
+        * {
+          width: 100%;
+        }
+      }
+    }
   }
 
   @media (max-width: 576px) {
     .category-list-holder {
       grid-template-columns: repeat(2, 1fr);
       display: grid;
-      max-height: 100px;
+      max-height: 115px;
     }
     .search-input {
       width: 100%;
