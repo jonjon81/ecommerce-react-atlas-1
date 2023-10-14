@@ -334,9 +334,9 @@ const Wrapper = styled.section`
     svg {
       font-size: 1.5rem;
       font-size: 1.5rem;
-      color: var(--clr-primary-5);
+      color: #000;
       &:hover {
-        color: #000;
+        color: var(--clr-primary-5);
       }
       &.angle-right {
         font-size: 1rem;
