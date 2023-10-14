@@ -35,6 +35,8 @@ import { Link } from 'react-router-dom';
 const AboutPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const ref2 = useRef(null);
+  const isInView2 = useInView(ref2, { once: true });
   return (
     <main>
       <PageHero title="about" />
@@ -203,14 +205,13 @@ const AboutPage = () => {
             </li>
           </ul>
           <br />
-          <h5>Important features to test out!</h5>
+          <h5 ref={ref2}>Important features to test out!</h5>
           <ul
             style={{
-              transform: isInView ? 'none' : 'translateX(300px)',
-              opacity: isInView ? 1 : 0,
-              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s',
+              transform: isInView2 ? 'none' : 'translateX(300px)',
+              opacity: isInView2 ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
             }}
-            ref={ref}
             className="normal-list list-item"
           >
             <li>Filter product data in many ways</li>
