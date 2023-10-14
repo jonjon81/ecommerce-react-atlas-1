@@ -38,7 +38,7 @@ const AboutPage = () => {
   return (
     <main>
       <PageHero title="about" />
-      <Wrapper className="page section section-center">
+      <Wrapper ref={ref} className="page section section-center">
         <img src={laptops} alt="nice desk" />
         <article>
           <div className="title">
@@ -75,9 +75,8 @@ const AboutPage = () => {
             style={{
               transform: isInView ? 'none' : 'translateX(300px)',
               opacity: isInView ? 1 : 0,
-              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.0s',
             }}
-            ref={ref}
             className="normal-list"
           >
             <li className="tech-stack">
