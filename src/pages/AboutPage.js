@@ -40,7 +40,7 @@ const AboutPage = () => {
   return (
     <main>
       <PageHero title="about" />
-      <Wrapper ref={ref} className="page section section-center">
+      <Wrapper className="page section section-center">
         <img src={laptops} alt="nice desk" />
         <article>
           <div className="title">
@@ -72,7 +72,9 @@ const AboutPage = () => {
             </p>
           </div>
           <br />
-          <h4 className="key-features">Key features / tools </h4>
+          <h4 ref={ref} className="key-features">
+            Key features / tools{' '}
+          </h4>
           <ul
             style={{
               transform: isInView ? 'none' : 'translateX(300px)',
