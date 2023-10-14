@@ -5,7 +5,7 @@ import { useInView } from 'framer-motion';
 
 const Services = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   return (
     <Wrapper>
       <div className="section-center">
@@ -18,7 +18,7 @@ const Services = () => {
             aliquam voluptates dolore aut vero consequuntur.
           </p>
         </article>
-        <div className="services-center">
+        <div ref={ref} className="services-center">
           {services.map((service) => {
             const { id, icon, title, text } = service;
             return (
@@ -30,7 +30,6 @@ const Services = () => {
                 }}
                 className="service"
                 key={id}
-                ref={ref}
               >
                 <span className="icon">{icon}</span>
                 <h4>{title}</h4>

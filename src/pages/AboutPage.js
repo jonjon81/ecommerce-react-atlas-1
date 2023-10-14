@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { PageHero } from '../components';
+import { useInView } from 'framer-motion';
 import laptops from '../assets/categories/laptops.jpeg';
 import {
   FaMailBulk,
@@ -32,6 +33,8 @@ import { SiStylelint, SiVite } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <main>
       <PageHero title="about" />
@@ -68,7 +71,15 @@ const AboutPage = () => {
           </div>
           <br />
           <h4 className="key-features">Key features / tools </h4>
-          <ul className="normal-list">
+          <ul
+            style={{
+              transform: isInView ? 'none' : 'translateX(300px)',
+              opacity: isInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
+            }}
+            ref={ref}
+            className="normal-list"
+          >
             <li className="tech-stack">
               Tech stack:
               <a target="_blank" rel="noreferrer" href="https://react.dev/">
@@ -194,7 +205,15 @@ const AboutPage = () => {
           </ul>
           <br />
           <h5>Important features to test out!</h5>
-          <ul className="normal-list list-item">
+          <ul
+            style={{
+              transform: isInView ? 'none' : 'translateX(300px)',
+              opacity: isInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s',
+            }}
+            ref={ref}
+            className="normal-list list-item"
+          >
             <li>Filter product data in many ways</li>
             <li>Search product names</li>
             <li>Top deals page with 15%+ deals</li>
