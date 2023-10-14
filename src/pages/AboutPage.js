@@ -27,6 +27,7 @@ import {
 } from 'react-icons/fa';
 import { BsFiletypeJson } from 'react-icons/bs';
 import { GiHook, GiMatterStates } from 'react-icons/gi';
+import { PiFramerLogoFill } from 'react-icons/pi';
 
 import { SiStylelint, SiVite } from 'react-icons/si';
 
@@ -112,98 +113,170 @@ const AboutPage = () => {
               >
                 <FaMobileAlt />
               </a>
-              <FaAngleRight className="angle-right" /> Fully responsive
+              <FaAngleRight className="angle-right" />{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="btn"
+                href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+              >
+                Fully responsive
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://react.dev/reference/react">
                 <GiHook />
               </a>
-              <FaAngleRight className="angle-right" /> React hooks
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://react.dev/reference/react">
+                React hooks
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://react.dev/learn/scaling-up-with-reducer-and-context">
                 <GiMatterStates />
               </a>
-              <FaAngleRight className="angle-right" /> React state management with context and reducers
+              <FaAngleRight className="angle-right" />{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="btn"
+                href="https://react.dev/learn/scaling-up-with-reducer-and-context"
+              >
+                React state management with context and reducers
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://formspree.io/">
                 <FaWpforms />
               </a>
-              <FaAngleRight className="angle-right" /> Sign up form on homepage using Formspree
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://formspree.io/">
+                Sign up form on homepage using Formspree
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://stripe.com/">
                 <FaStripe />
               </a>
-              <FaAngleRight className="angle-right" /> Integrated with Stripe for full checkout
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://stripe.com/">
+                Integrated with Stripe for full checkout
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://www.netlify.com/">
                 <FaSmile />
               </a>
-              <FaAngleRight className="angle-right" /> Depoyed using Netlify and www.Jon-Atlas.com
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://www.netlify.com/">
+                Depoyed using Netlify and www.Jon-Atlas.com
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://auth0.com/">
                 <FaRegistered />
               </a>
-              <FaAngleRight className="angle-right" /> Login/sign-up integration using Auth0
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://auth0.com/">
+                Login/sign-up integration using Auth0
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://vitejs.dev/guide/">
                 <SiVite />
               </a>
-              <FaAngleRight className="angle-right" /> Used Vite for rapid development
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://vitejs.dev/guide/">
+                Used Vite for rapid development
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://github.com/">
                 <FaGit />
               </a>
-              <FaAngleRight className="angle-right" /> Git
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://github.com/">
+                Git
+              </a>
             </li>
 
             <li>
               <a target="_blank" rel="noreferrer" href="https://desktop.github.com/">
                 <FaGithubAlt />
               </a>
-              <FaAngleRight className="angle-right" /> Github desktop for version control
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://desktop.github.com/">
+                Github desktop for version control
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://dummyjson.com/products?limit=100">
                 <BsFiletypeJson />
               </a>
-              <FaAngleRight className="angle-right" /> Used dummyjson.com for all the product data
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://dummyjson.com/products?limit=100">
+                Used dummyjson.com for all the product data
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://styled-components.com/">
                 <SiStylelint />
               </a>
-              <FaAngleRight className="angle-right" /> Styled components for styling in each component
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://styled-components.com/">
+                Styled components for styling in each component
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://react-icons.github.io/react-icons/icons">
                 <FaReact />
               </a>
-              <FaAngleRight className="angle-right" /> React Icons
+              <FaAngleRight className="angle-right" />{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="btn"
+                href="https://react-icons.github.io/react-icons/icons"
+              >
+                React Icons
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/react-slick">
                 <FaSlidersH />
               </a>
-              <FaAngleRight className="angle-right" /> Carousels using Slick Sider
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/react-slick">
+                Carousels using Slick Sider
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://reactrouter.com/en/main">
                 <FaRoute />
               </a>
-              <FaAngleRight className="angle-right" /> React Router
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://reactrouter.com/en/main">
+                React Router
+              </a>
             </li>
             <li>
               <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/axios">
                 <FaDatabase />
               </a>
-              <FaAngleRight className="angle-right" /> Axios for communicating with API
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/axios">
+                Axios for communicating with API
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/framer-motion">
+                <PiFramerLogoFill />
+              </a>
+              <FaAngleRight className="angle-right" />{' '}
+              <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/framer-motion">
+                Animation using Framer motion library
+              </a>
             </li>
           </ul>
           <br />
@@ -228,6 +301,7 @@ const AboutPage = () => {
             <li>Fill out the form on the homepage and I'll receive an email</li>
             <li>Scroll top arrow for longer pages</li>
             <li>Gallery modal popup on single product pages</li>
+            <li>Animation on scroll on home and about page</li>
           </ul>
         </article>
       </Wrapper>
@@ -242,6 +316,9 @@ const Wrapper = styled.section`
       display: flex;
       align-items: center;
       padding-bottom: 10px;
+      .btn {
+        width: 100%;
+      }
       > svg {
         margin: 0 10px;
       }
@@ -253,6 +330,7 @@ const Wrapper = styled.section`
         display: list-item;
       }
     }
+
     svg {
       font-size: 1.5rem;
       font-size: 1.5rem;
