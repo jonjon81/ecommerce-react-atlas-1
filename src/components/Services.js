@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { services } from '../utils/constants';
+import { useInView } from 'framer-motion';
+
 const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
     <Wrapper>
       <div className="section-center">
@@ -18,7 +22,16 @@ const Services = () => {
           {services.map((service) => {
             const { id, icon, title, text } = service;
             return (
-              <article className="service" key={id}>
+              <article
+                style={{
+                  transform: isInView ? 'none' : 'translateX(-300px)',
+                  opacity: isInView ? 1 : 0,
+                  transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+                }}
+                className="service"
+                key={id}
+                ref={ref}
+              >
                 <span className="icon">{icon}</span>
                 <h4>{title}</h4>
                 <p>{text}</p>
@@ -60,6 +73,7 @@ const Wrapper = styled.section`
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: var(--radius);
+    opacity: 0;
     p {
       color: #fff;
     }
