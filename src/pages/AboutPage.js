@@ -259,25 +259,41 @@ const AboutPage = () => {
 const Wrapper = styled.section`
   .main-section {
     display: flex;
-    flex-direction: row;
     width: 100%;
     column-gap: 2rem;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
     > * {
       width: 50%;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
     }
   }
   ul.normal-list.boxes {
     display: flex;
     flex-wrap: wrap;
-    > * {
+    li {
       width: 33.33%;
       height: 100px;
       padding: 0;
       border: 0.5rem solid transparent;
+      @media (max-width: 992px) {
+        width: 50%;
+      }
+      @media (max-width: 567px) {
+        height: auto;
+      }
       a {
         height: 100%;
         display: flex;
         align-items: center;
+        @media (max-width: 567px) {
+          flex-direction: column;
+          justify-content: center;
+        }
         &.btn {
           background-color: var(--clr-primary-2);
           &:hover {
@@ -292,11 +308,19 @@ const Wrapper = styled.section`
           color: #fff;
           padding-right: 1rem;
           font-size: 4rem;
+          @media (max-width: 567px) {
+            font-size: 3rem;
+            padding-right: 0;
+            padding-bottom: 1rem;
+          }
         }
         span {
           font-size: 1rem;
           width: 100%;
           line-height: 1.25;
+          @media (max-width: 767px) {
+            font-size: 0.875rem;
+          }
         }
       }
     }
@@ -324,7 +348,6 @@ const Wrapper = styled.section`
 
     svg {
       font-size: 1.5rem;
-      font-size: 1.5rem;
       color: #000;
       &:hover {
         color: var(--clr-primary-5);
@@ -351,6 +374,9 @@ const Wrapper = styled.section`
     color: rgb(0, 0, 0);
     font-size: 1.25rem;
     text-transform: uppercase;
+    @media (max-width: 567px) {
+      font-size: 1rem;
+    }
     a {
       margin: 5px;
       &:hover > * {
@@ -358,6 +384,9 @@ const Wrapper = styled.section`
       }
       svg {
         font-size: 2.5rem;
+        @media (max-width: 992px) {
+          font-size: 2rem;
+        }
       }
     }
     svg {
@@ -386,9 +415,6 @@ const Wrapper = styled.section`
       font-size: 1.5rem;
       color: #000;
     }
-  }
-
-  @media (min-width: 992px) {
   }
 `;
 export default AboutPage;
