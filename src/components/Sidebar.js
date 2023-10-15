@@ -109,6 +109,8 @@ const SidebarContainer = styled.div`
     left: 10px;
     display: flex;
     cursor: pointer;
+    background: #fff;
+    color: #000;
     svg {
       margin-right: 5px;
     }
