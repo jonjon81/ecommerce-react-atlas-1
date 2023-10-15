@@ -28,7 +28,6 @@ import {
 import { BsFiletypeJson } from 'react-icons/bs';
 import { GiHook, GiMatterStates } from 'react-icons/gi';
 import { PiFramerLogoFill } from 'react-icons/pi';
-
 import { SiStylelint, SiVite } from 'react-icons/si';
 
 import { Link } from 'react-router-dom';
@@ -57,7 +56,8 @@ const AboutPage = () => {
 
           <div className="contact-container">
             <p className="contact">
-              <strong>Contact:</strong>
+              <strong>Contact</strong>
+              <FaAngleRight className="angle-right" />
               <a target="_blank" rel="noreferrer" href="mailto:jsa@jonatlas.com">
                 <FaMailBulk />
               </a>
@@ -66,13 +66,41 @@ const AboutPage = () => {
               </a>
             </p>
             <p className="contact">
-              <strong>Resume:</strong>
+              <strong>Resume</strong>
+              <FaAngleRight className="angle-right" />
               <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
                 <FaFileCsv />
               </Link>
             </p>
           </div>
           <br />
+          <ul>
+            <li className="tech-stack">
+              <strong>Tech stack</strong>
+              <FaAngleRight className="angle-right" />
+              <a target="_blank" rel="noreferrer" href="https://react.dev/">
+                <FaReact className="react-color" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://nodejs.org/#">
+                <FaNodeJs className="node-color" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://html.com/html5/">
+                <FaHtml5 className="html-color" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.css3.com/">
+                <FaCss3 className="css-color" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                <FaJs className="js-color" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/">
+                <FaNpm className="npm-color" />
+              </a>
+            </li>
+          </ul>
+          <br />
+        </article>
+        <article className="key-feature-tools">
           <h4 ref={ref} className="key-features">
             Key features / tools{' '}
           </h4>
@@ -84,27 +112,6 @@ const AboutPage = () => {
             }}
             className="normal-list"
           >
-            <li className="tech-stack">
-              Tech stack:
-              <a target="_blank" rel="noreferrer" href="https://react.dev/">
-                <FaReact />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://nodejs.org/#">
-                <FaNodeJs />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://html.com/html5/">
-                <FaHtml5 />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.css3.com/">
-                <FaCss3 />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-                <FaJs />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/">
-                <FaNpm />
-              </a>
-            </li>
             <li>
               <a
                 target="_blank"
@@ -309,9 +316,11 @@ const AboutPage = () => {
   );
 };
 const Wrapper = styled.section`
+  #root svg.angle-right {
+    color: #000;
+  }
   ul.normal-list {
     list-style-type: disc;
-    padding-left: 20px;
     li {
       display: flex;
       align-items: center;
@@ -325,7 +334,7 @@ const Wrapper = styled.section`
     }
 
     &.list-item {
-      padding-left: 40px;
+      padding-left: 20px;
       li {
         display: list-item;
       }
@@ -360,6 +369,12 @@ const Wrapper = styled.section`
     align-items: center;
     a {
       margin: 5px;
+      &:hover > * {
+        color: #000;
+      }
+      svg {
+        font-size: 2.5rem;
+      }
     }
     svg {
       font-size: 1.5rem;
@@ -381,6 +396,7 @@ const Wrapper = styled.section`
   .underline {
     margin-left: 0;
   }
+
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
   }

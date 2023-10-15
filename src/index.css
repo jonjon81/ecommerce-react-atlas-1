@@ -46,6 +46,25 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
+#root .react-color {
+  color: #5ed3f3;
+}
+#root .css-color {
+  color: #2194f0;
+}
+#root .js-color {
+  color: #f7d800;
+}
+#root .node-color {
+  color: #509941;
+}
+#root .html-color {
+  color: #f75421;
+}
+#root .npm-color {
+  color: #cf0000;
+}
 /*
 =============== 
 Global Styles
