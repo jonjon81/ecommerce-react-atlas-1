@@ -24,6 +24,7 @@ const Sidebar = () => {
   function doubleFunction() {
     clearFilters();
     closeSidebar();
+    window.scrollTo(0, 0);
   }
 
   return (
@@ -94,7 +95,8 @@ const SidebarContainer = styled.div`
   .back-to-main {
     padding: 1rem;
     position: absolute;
-    top: 0;
+    top: 10px;
+    left: 10px;
     display: flex;
     cursor: pointer;
     svg {
@@ -164,7 +166,7 @@ const SidebarContainer = styled.div`
     position: absolute;
     top: 5rem;
     display: none;
-    padding-top: 50px;
+    padding-top: 60px;
     flex-wrap: wrap;
     &.active {
       display: flex;
