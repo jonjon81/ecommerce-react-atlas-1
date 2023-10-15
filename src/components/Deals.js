@@ -190,7 +190,6 @@ const Wrapper = styled.section`
         height: 40px;
         -webkit-box-orient: vertical;
         display: flex;
-        align-items: center;
       }
     }
     img {
