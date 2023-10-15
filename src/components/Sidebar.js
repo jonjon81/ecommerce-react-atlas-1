@@ -45,9 +45,14 @@ const Sidebar = () => {
                     {text} <FaChevronRight className="chevron-right" />
                   </Link>
                   <ul className={`sublinks ${isActive ? null : 'active'}`}>
-                    <button onClick={handleSubmenuToggle} className="back-to-main">
+                    <button onClick={handleSubmenuToggle} className="btn back-to-main">
                       <FaChevronLeft /> <span>back to main menu</span>
                     </button>
+                    <li key="all-products">
+                      <Link onClick={doubleFunction} to="/products">
+                        All
+                      </Link>
+                    </li>
                     {ProductSublinksAz.map((sublink) => {
                       return (
                         <li key={sublink.id}>
