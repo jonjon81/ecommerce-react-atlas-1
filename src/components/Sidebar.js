@@ -21,10 +21,15 @@ const Sidebar = () => {
   const { myUser } = useUserContext();
   const { clearFilters } = useFilterContext();
 
-  function doubleFunction() {
+  function mainMenuFunction() {
     clearFilters();
     closeSidebar();
     window.scrollTo(0, 0);
+  }
+
+  function subMenuFunction() {
+    mainMenuFunction();
+    handleSubmenuToggle();
   }
 
   return (
@@ -49,14 +54,14 @@ const Sidebar = () => {
                       <FaChevronLeft /> <span>back to main menu</span>
                     </button>
                     <li key="all-products">
-                      <Link onClick={doubleFunction} to="/products">
+                      <Link onClick={subMenuFunction} to="/products">
                         All
                       </Link>
                     </li>
                     {ProductSublinksAz.map((sublink) => {
                       return (
                         <li key={sublink.id}>
-                          <Link onClick={doubleFunction} to={sublink.url}>
+                          <Link onClick={subMenuFunction} to={sublink.url}>
                             {sublink.text}
                           </Link>
                         </li>
@@ -68,7 +73,7 @@ const Sidebar = () => {
             }
             return (
               <li key={id}>
-                <Link to={url} onClick={doubleFunction}>
+                <Link to={url} onClick={mainMenuFunction}>
                   {text}
                 </Link>
               </li>
