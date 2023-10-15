@@ -4,6 +4,7 @@ import Logo from './Logo';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { links } from '../utils/constants';
+import { ProductSublinksAz } from '../utils/constants';
 import CartButtons from './CartButtons';
 import { useProductsContext } from '../context/products_context';
 import { useUserContext } from '../context/user_context';
@@ -13,6 +14,7 @@ const Nav = () => {
   const { openSidebar } = useProductsContext();
   const { myUser } = useUserContext();
   const { clearFilters } = useFilterContext();
+
   return (
     <NavContainer>
       <div className="nav-center">
@@ -27,6 +29,26 @@ const Nav = () => {
         <ul className="nav-links">
           {links.map((link) => {
             const { id, text, url } = link;
+            if (text === 'products') {
+              return (
+                <li key={id}>
+                  <Link onClick={clearFilters} to={url}>
+                    {text}
+                  </Link>
+                  <ul className="sublinks">
+                    {ProductSublinksAz.map((sublink) => {
+                      return (
+                        <li key={sublink.id}>
+                          <Link onClick={clearFilters} to={sublink.url}>
+                            {sublink.text}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            }
             return (
               <li key={id}>
                 <Link onClick={clearFilters} to={url}>
@@ -53,6 +75,27 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ul.sublinks {
+    position: absolute;
+    z-index: 100;
+    background: var(--clr-primary-0);
+    display: none;
+    top: 5rem;
+    border: 2px solid #fff;
+    padding: 1rem;
+    a {
+      padding: 0;
+      &:hover {
+        border-bottom-color: var(--clr-yellow-dark);
+      }
+    }
+  }
+
+  ul.nav-links li:hover > ul {
+    display: flex;
+    flex-direction: column;
+  }
 
   .nav-center {
     width: 90vw;
@@ -85,6 +128,14 @@ const NavContainer = styled.nav`
   }
   .nav-links {
     display: none;
+    > li {
+      height: 5rem;
+      a {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+    }
   }
   .cart-btn-wrapper {
     display: none;
@@ -110,9 +161,9 @@ const NavContainer = styled.nav`
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
-        border: 2px solid transparent;
+        border-bottom: 4px solid transparent;
         &:hover {
-          border-bottom: 2px solid var(--clr-yellow-dark);
+          border-bottom: 4px solid var(--clr-yellow-dark);
         }
       }
     }

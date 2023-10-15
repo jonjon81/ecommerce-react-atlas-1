@@ -5,6 +5,8 @@ import Error from './Error';
 import Loading from './Loading';
 import Category from './Category';
 import Hidden from './Hidden';
+const categoryList = [];
+
 const CategoryProducts = () => {
   const { products_loading: loading, products_error: error, featured_products: category } = useProductsContext();
   if (loading) {
@@ -13,7 +15,6 @@ const CategoryProducts = () => {
   if (error) {
     return <Error />;
   }
-  const categoryList = [];
 
   return (
     <Wrapper className="section">
