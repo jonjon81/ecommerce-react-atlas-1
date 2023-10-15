@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { links } from '../utils/constants';
 import { ProductSublinksAz } from '../utils/constants';
@@ -33,7 +33,7 @@ const Nav = () => {
               return (
                 <li key={id}>
                   <Link onClick={clearFilters} to={url}>
-                    {text}
+                    {text} <FaChevronDown className="chevron-down" />
                   </Link>
                   <ul className="sublinks">
                     {ProductSublinksAz.map((sublink) => {
@@ -75,6 +75,11 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  svg.chevron-down {
+    margin-left: 5px;
+    margin-top: 4px;
+  }
 
   ul.sublinks {
     position: absolute;

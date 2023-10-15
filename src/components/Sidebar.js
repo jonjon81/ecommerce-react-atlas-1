@@ -2,8 +2,9 @@ import React from 'react';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaChevronRight } from 'react-icons/fa';
 import { links } from '../utils/constants';
+import { ProductSublinksAz } from '../utils/constants';
 import styled from 'styled-components';
 import CartButtons from './CartButtons';
 import { useUserContext } from '../context/user_context';
@@ -30,6 +31,26 @@ const Sidebar = () => {
         </div>
         <ul className="links">
           {links.map(({ id, text, url }) => {
+            if (text === 'products') {
+              return (
+                <li key={id}>
+                  <Link onClick={clearFilters}>
+                    {text} <FaChevronRight className="chevron-right" />
+                  </Link>
+                  <ul className="sublinks">
+                    {ProductSublinksAz.map((sublink) => {
+                      return (
+                        <li key={sublink.id}>
+                          <Link onClick={clearFilters} to={sublink.url}>
+                            {sublink.text}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            }
             return (
               <li key={id}>
                 <Link to={url} onClick={doubleFunction}>
@@ -116,6 +137,28 @@ const SidebarContainer = styled.div`
   }
   .cart-btn-wrapper {
     margin: 2rem auto;
+  }
+  ul.sublinks {
+    background: var(--clr-primary-3);
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 5rem;
+    display: none;
+    flex-wrap: wrap;
+    li {
+      width: 50%;
+    }
+  }
+
+  ul.links li:hover > ul {
+    display: flex;
+  }
+
+  svg.chevron-right {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
   }
   @media screen and (min-width: 992px) {
     .sidebar {
