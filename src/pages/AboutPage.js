@@ -11,7 +11,7 @@ import {
   FaCss3,
   FaHtml5,
   FaJs,
-  FaNodeJs,
+  FaNode,
   FaStripe,
   FaWpforms,
   FaAngleRight,
@@ -41,65 +41,66 @@ const AboutPage = () => {
     <main>
       <PageHero title="about" />
       <Wrapper className="page section section-center">
-        <img src={laptops} alt="nice desk" />
-        <article>
-          <div className="title">
-            <h2>my story</h2>
-            <div className="underline"></div>
-          </div>
-          <p>
-            This ecommerce React project was built for the purpose of showing off my abilities to make a fully
-            functional and attractive application. Please try it out on both desktop and mobile and let me know your
-            thoughts or if you run into any issues. If you think I'd be a good addition to your team please reach out! I
-            am currently looking for FT remote opportunities.
-          </p>
+        <div className="main-section">
+          <img src={laptops} alt="nice desk" />
+          <div>
+            <div className="title">
+              <h2>my story</h2>
+              <div className="underline"></div>
+            </div>
+            <p>
+              This ecommerce React project was built for the purpose of showing off my abilities to make a fully
+              functional and attractive application. Please try it out on both desktop and mobile and let me know your
+              thoughts or if you run into any issues. If you think I'd be a good addition to your team please reach out!
+              I am currently looking for FT remote opportunities.
+            </p>
 
-          <div className="contact-container">
-            <p className="contact">
-              <strong>Contact</strong>
-              <FaAngleRight className="angle-right" />
-              <a target="_blank" rel="noreferrer" href="mailto:jsa@jonatlas.com">
-                <FaMailBulk />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonatlas">
-                <FaLinkedin />
-              </a>
-            </p>
-            <p className="contact">
-              <strong>Resume</strong>
-              <FaAngleRight className="angle-right" />
-              <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
-                <FaFileCsv />
-              </Link>
-            </p>
+            <div className="contact-container">
+              <p className="contact">
+                <strong>Contact</strong>
+                <FaAngleRight className="angle-right large" />
+                <a target="_blank" rel="noreferrer" href="mailto:jsa@jonatlas.com">
+                  <FaMailBulk />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonatlas">
+                  <FaLinkedin />
+                </a>
+              </p>
+              <p className="contact">
+                <strong>Resume</strong>
+                <FaAngleRight className="angle-right large" />
+                <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
+                  <FaFileCsv />
+                </Link>
+              </p>
+            </div>
+            <br />
+            <ul>
+              <li className="tech-stack">
+                <strong>Tech stack</strong>
+                <FaAngleRight className="angle-right large" />
+                <a target="_blank" rel="noreferrer" href="https://react.dev/">
+                  <FaReact className="react-color tech-icon" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://nodejs.org/#">
+                  <FaNode className="node-color tech-icon" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://html.com/html5/">
+                  <FaHtml5 className="html-color tech-icon" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.css3.com/">
+                  <FaCss3 className="css-color tech-icon" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                  <FaJs className="js-color tech-icon" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/">
+                  <FaNpm className="npm-color tech-icon" />
+                </a>
+              </li>
+            </ul>
           </div>
-          <br />
-          <ul>
-            <li className="tech-stack">
-              <strong>Tech stack</strong>
-              <FaAngleRight className="angle-right" />
-              <a target="_blank" rel="noreferrer" href="https://react.dev/">
-                <FaReact className="react-color" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://nodejs.org/#">
-                <FaNodeJs className="node-color" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://html.com/html5/">
-                <FaHtml5 className="html-color" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.css3.com/">
-                <FaCss3 className="css-color" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-                <FaJs className="js-color" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/">
-                <FaNpm className="npm-color" />
-              </a>
-            </li>
-          </ul>
-          <br />
-        </article>
+        </div>
         <article className="key-feature-tools">
           <h4 ref={ref} className="key-features">
             Key features / tools{' '}
@@ -110,184 +111,124 @@ const AboutPage = () => {
               opacity: isInView ? 1 : 0,
               transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
             }}
-            className="normal-list"
+            className="normal-list boxes"
           >
             <li>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
-              >
-                <FaMobileAlt />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a
                 target="_blank"
                 rel="noreferrer"
                 className="btn"
                 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
               >
-                Fully responsive
+                <FaMobileAlt /> <span>Fully responsive</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://react.dev/reference/react">
-                <GiHook />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://react.dev/reference/react">
-                React hooks
+                <GiHook /> <span>React hooks</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://react.dev/learn/scaling-up-with-reducer-and-context">
-                <GiMatterStates />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a
                 target="_blank"
                 rel="noreferrer"
                 className="btn"
                 href="https://react.dev/learn/scaling-up-with-reducer-and-context"
               >
-                React state management with context and reducers
+                <GiMatterStates /> <span>React state management with context and reducers</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://formspree.io/">
-                <FaWpforms />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://formspree.io/">
-                Sign up form on homepage using Formspree
+                <FaWpforms /> <span>Sign up form on homepage using Formspree</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://stripe.com/">
-                <FaStripe />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://stripe.com/">
-                Integrated with Stripe for full checkout
+                <FaStripe /> <span>Integrated with Stripe for full checkout</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://www.netlify.com/">
-                <FaSmile />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://www.netlify.com/">
-                Depoyed using Netlify and www.Jon-Atlas.com
+                <FaSmile /> <span>Depoyed using Netlify and www.Jon-Atlas.com</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://auth0.com/">
-                <FaRegistered />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://auth0.com/">
-                Login/sign-up integration using Auth0
+                <FaRegistered /> <span>Login/sign-up integration using Auth0</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://vitejs.dev/guide/">
-                <SiVite />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://vitejs.dev/guide/">
-                Used Vite for rapid development
+                <SiVite /> <span>Used Vite for rapid development</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://github.com/">
-                <FaGit />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://github.com/">
-                Git
+                <FaGit /> <span>Git</span>
               </a>
             </li>
 
             <li>
-              <a target="_blank" rel="noreferrer" href="https://desktop.github.com/">
-                <FaGithubAlt />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://desktop.github.com/">
-                Github desktop for version control
+                <FaGithubAlt /> <span>Github desktop for version control</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://dummyjson.com/products?limit=100">
-                <BsFiletypeJson />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://dummyjson.com/products?limit=100">
-                Used dummyjson.com for all the product data
+                <BsFiletypeJson /> <span>Used dummyjson.com for all the product data</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://styled-components.com/">
-                <SiStylelint />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://styled-components.com/">
-                Styled components for styling in each component
+                <SiStylelint /> <span>Styled components for styling in each component</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://react-icons.github.io/react-icons/icons">
-                <FaReact />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a
                 target="_blank"
                 rel="noreferrer"
                 className="btn"
                 href="https://react-icons.github.io/react-icons/icons"
               >
-                React Icons
+                <FaReact /> <span>React Icons</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/react-slick">
-                <FaSlidersH />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/react-slick">
-                Carousels using Slick Sider
+                <FaSlidersH />
+                <span>Carousels using Slick Sider</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://reactrouter.com/en/main">
-                <FaRoute />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://reactrouter.com/en/main">
-                React Router
+                <FaRoute />
+                <span>React Router</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/axios">
-                <FaDatabase />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/axios">
-                Axios for communicating with API
+                <FaDatabase />
+                <span>Axios for communicating with API</span>
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/framer-motion">
-                <PiFramerLogoFill />
-              </a>
-              <FaAngleRight className="angle-right" />{' '}
               <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/framer-motion">
-                Animation using Framer motion library
+                <PiFramerLogoFill />
+                <span>Animation using Framer motion library</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/framer-motion">
+                <PiFramerLogoFill />
+                <span>Add here</span>
               </a>
             </li>
           </ul>
-          <br />
-          <h5 ref={ref2}>Important features to test out!</h5>
+        </article>
+        <article>
+          {' '}
+          <h5 ref={ref2}>Important features to check out!</h5>
           <ul
             style={{
               transform: isInView2 ? 'none' : 'translateX(300px)',
@@ -316,8 +257,49 @@ const AboutPage = () => {
   );
 };
 const Wrapper = styled.section`
-  #root svg.angle-right {
-    color: #000;
+  .main-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 2rem;
+    > * {
+      width: 50%;
+    }
+  }
+  ul.normal-list.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      width: 33.33%;
+      height: 100px;
+      padding: 0;
+      border: 0.5rem solid transparent;
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &.btn {
+          background-color: var(--clr-primary-2);
+          &:hover {
+            color: var(--clr-primary-1);
+            background: var(--clr-primary-7);
+          }
+          &:focus {
+            border: 4px solid var(--clr-yellow-dark);
+          }
+        }
+        svg {
+          color: #fff;
+          padding-right: 1rem;
+          font-size: 4rem;
+        }
+        span {
+          font-size: 1rem;
+          width: 100%;
+          line-height: 1.25;
+        }
+      }
+    }
   }
   ul.normal-list {
     list-style-type: disc;
@@ -349,7 +331,6 @@ const Wrapper = styled.section`
       }
       &.angle-right {
         font-size: 1rem;
-        color: #000;
       }
     }
   }
@@ -359,7 +340,7 @@ const Wrapper = styled.section`
     width: 100%;
     display: block;
     border-radius: var(--radius);
-    height: 500px;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -367,6 +348,9 @@ const Wrapper = styled.section`
   .tech-stack {
     display: flex;
     align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    text-transform: uppercase;
     a {
       margin: 5px;
       &:hover > * {
@@ -397,8 +381,14 @@ const Wrapper = styled.section`
     margin-left: 0;
   }
 
+  .angle-right {
+    &.large {
+      font-size: 1.5rem;
+      color: #000;
+    }
+  }
+
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
   }
 `;
 export default AboutPage;

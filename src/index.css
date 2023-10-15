@@ -65,6 +65,10 @@ Variables
 #root .npm-color {
   color: #cf0000;
 }
+
+#root .tech-icon:hover {
+  color: #000;
+}
 /*
 =============== 
 Global Styles
