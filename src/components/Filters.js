@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useFilterContext } from '../context/filter_context';
 import { getUniqueValues, formatPrice } from '../utils/helpers';
-import { FaCog } from 'react-icons/fa';
+import { FaCog, FaTimes } from 'react-icons/fa';
 
 const Filters = () => {
   const {
@@ -48,7 +48,7 @@ const Filters = () => {
                 className="search-input"
               />
               <button className="clearButton" onClick={clearFilters}>
-                X
+                <FaTimes />
               </button>
             </div>
             <button onClick={handleFilterToggle} className="-cog">
@@ -235,13 +235,22 @@ const Wrapper = styled.section`
       }
       .clearButton {
         padding: 5px;
-        margin-left: -25px;
+        margin-left: -30px;
         font-weight: bold;
         display: none;
         border: none;
+        svg {
+          position: absolute;
+          font-size: 1.25rem;
+        }
         &.active {
           display: flex;
           align-items: center;
+          color: var(--clr-red-dark);
+
+          &:hover {
+            color: #000;
+          }
         }
       }
     }
