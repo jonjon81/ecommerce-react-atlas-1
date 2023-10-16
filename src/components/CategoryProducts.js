@@ -15,6 +15,9 @@ const CategoryProducts = () => {
   }
 
   const every_nth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
+  const alphaCategories = every_nth(category, 5).sort((a, b) => {
+    return a.category.localeCompare(b.category);
+  });
 
   return (
     <Wrapper className="section">
@@ -23,7 +26,7 @@ const CategoryProducts = () => {
         <div className="underline"></div>
       </div>
       <div className="section-center category">
-        {every_nth(category, 5).map((item) => {
+        {alphaCategories.map((item) => {
           return <Category key={item.id} {...item} />;
         })}
       </div>
