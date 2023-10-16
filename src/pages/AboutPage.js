@@ -314,9 +314,15 @@ const AboutPage = () => {
             <li>
               <span>Free shipping for orders more than 50%</span>
               <FaAngleRight className="angle-right large" />
-              <Link onClick={scrollTop} className="btn" to="/checkout">
-                Checkout
-              </Link>
+              <div>
+                {' '}
+                <Link onClick={scrollTop} className="btn" to="/cart">
+                  Cart
+                </Link>
+                <Link onClick={scrollTop} className="btn" to="/checkout">
+                  Checkout
+                </Link>
+              </div>
             </li>
             <li>
               <span>Fill out the form on the homepage and I'll receive an email</span>{' '}
