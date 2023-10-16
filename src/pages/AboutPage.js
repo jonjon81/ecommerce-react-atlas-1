@@ -233,7 +233,9 @@ const AboutPage = () => {
         </article>
         <article>
           {' '}
-          <h5 ref={ref2}>Important features to check out!</h5>
+          <h4 className="important-features" ref={ref2}>
+            Important features to check out!
+          </h4>
           <ul
             style={{
               transform: isInView2 ? 'none' : 'translateX(300px)',
@@ -245,21 +247,27 @@ const AboutPage = () => {
             <li>
               <span>Filter product data in many ways </span>
               <FaAngleRight className="angle-right large" />
-              <Link onClick={scrollTop} className="btn" to="/products">
-                Products
-              </Link>
-              <Link onClick={scrollTop} className="btn" to="/top-deals">
-                Top Deals
-              </Link>
+              <div>
+                {' '}
+                <Link onClick={scrollTop} className="btn" to="/products">
+                  Products
+                </Link>
+                <Link onClick={scrollTop} className="btn" to="/top-deals">
+                  Top Deals
+                </Link>
+              </div>
             </li>
             <li>
               <span>Search product names</span> <FaAngleRight className="angle-right large" />
-              <Link onClick={scrollTop} className="btn" to="/products">
-                Products
-              </Link>
-              <Link onClick={scrollTop} className="btn" to="/top-deals">
-                Top Deals
-              </Link>
+              <div>
+                {' '}
+                <Link onClick={scrollTop} className="btn" to="/products">
+                  Products
+                </Link>
+                <Link onClick={scrollTop} className="btn" to="/top-deals">
+                  Top Deals
+                </Link>
+              </div>
             </li>
             <li>
               <span>Top deals page with 15%+ deals</span> <FaAngleRight className="angle-right large" />
@@ -283,12 +291,15 @@ const AboutPage = () => {
             <li>
               <span>Filter dropdown on mobile </span>
               <FaAngleRight className="angle-right large" />
-              <Link onClick={scrollTop} className="btn" to="/products">
-                Products
-              </Link>
-              <Link onClick={scrollTop} className="btn" to="/top-deals">
-                Top Deals
-              </Link>
+              <div>
+                {' '}
+                <Link onClick={scrollTop} className="btn" to="/products">
+                  Products
+                </Link>
+                <Link onClick={scrollTop} className="btn" to="/top-deals">
+                  Top Deals
+                </Link>
+              </div>
             </li>
             <li>
               <span>Login using new username/password or through LinkedIn/Gmail</span>
@@ -326,12 +337,15 @@ const AboutPage = () => {
             </li>
             <li>
               <span>Animation on scroll on home and about page</span> <FaAngleRight className="angle-right large" />
-              <Link onClick={scrollTop} className="btn" to="/">
-                Home
-              </Link>{' '}
-              <Link onClick={scrollTop} className="btn" to="/about">
-                About
-              </Link>
+              <div>
+                {' '}
+                <Link onClick={scrollTop} className="btn" to="/">
+                  Home
+                </Link>{' '}
+                <Link onClick={scrollTop} className="btn" to="/about">
+                  About
+                </Link>
+              </div>
             </li>
           </ul>
         </article>
@@ -408,6 +422,12 @@ const Wrapper = styled.section`
       }
     }
   }
+  .important-features {
+    width: 800px;
+    margin: auto;
+    padding-bottom: 1rem;
+    max-width: 100vw;
+  }
   ul.normal-list {
     list-style-type: disc;
     li {
@@ -424,11 +444,30 @@ const Wrapper = styled.section`
 
     &.list-item {
       padding-left: 0;
+      width: 800px;
+      margin: auto;
+      max-width: 100vw;
       li {
         padding: 1rem 0;
         border-bottom: 1px solid #ccc;
         display: flex;
         align-items: center;
+        span {
+          width: 50%;
+          @media (max-width: 800px) {
+            width: 200px;
+            max-width: 40%;
+          }
+        }
+        div {
+          display: flex;
+          @media (max-width: 800px) {
+            flex-direction: column;
+            a:nth-child(2) {
+              margin-top: 10px;
+            }
+          }
+        }
         a.btn {
           width: auto;
           margin-left: 10px;
