@@ -32,12 +32,20 @@ const Sidebar = () => {
     handleSubmenuToggle();
   }
 
+  function closeBothMenus() {
+    closeSidebar();
+    let openSub = document.querySelector('.sublinks.active');
+    if (openSub) {
+      handleSubmenuToggle();
+    }
+  }
+
   return (
     <SidebarContainer>
       <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
         <div className="sidebar-header">
           <Logo />
-          <button className="close-btn" onClick={closeSidebar}>
+          <button className="close-btn" onClick={closeBothMenus}>
             <FaTimes />
           </button>
         </div>
@@ -177,11 +185,12 @@ const SidebarContainer = styled.div`
     z-index: 1;
     position: absolute;
     top: 5rem;
-    display: none;
     padding-top: 60px;
     flex-wrap: wrap;
+    right: 100%;
+    transition: 0.3s;
     &.active {
-      display: flex;
+      right: 0;
     }
     li {
       width: 50%;
