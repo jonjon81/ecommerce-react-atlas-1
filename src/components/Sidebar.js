@@ -191,6 +191,7 @@ const SidebarContainer = styled.div`
     transition: 0.3s;
     &.active {
       right: 0;
+      display: flex;
     }
     li {
       width: 50%;
