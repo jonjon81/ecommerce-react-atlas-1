@@ -231,7 +231,7 @@ const AboutPage = () => {
             </li>
           </ul>
         </article>
-        <article>
+        <article className="important-features-list">
           {' '}
           <h4 className="important-features" ref={ref2}>
             Important features to check out!
@@ -421,6 +421,10 @@ const Wrapper = styled.section`
         }
       }
     }
+  }
+
+  .important-features-list {
+    max-width: calc(100vw - 40px);
   }
   .important-features {
     width: 800px;
