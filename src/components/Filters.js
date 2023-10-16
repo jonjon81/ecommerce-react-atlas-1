@@ -241,7 +241,7 @@ const Wrapper = styled.section`
         border: none;
         &.active {
           display: flex;
-          align-item: center;
+          align-items: center;
         }
       }
     }
