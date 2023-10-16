@@ -243,7 +243,8 @@ const AboutPage = () => {
             className="normal-list list-item"
           >
             <li>
-              Filter product data in many ways <FaAngleRight className="angle-right large" />
+              <span>Filter product data in many ways </span>
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products">
                 Products
               </Link>
@@ -252,7 +253,7 @@ const AboutPage = () => {
               </Link>
             </li>
             <li>
-              Search product names <FaAngleRight className="angle-right large" />
+              <span>Search product names</span> <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products">
                 Products
               </Link>
@@ -261,25 +262,27 @@ const AboutPage = () => {
               </Link>
             </li>
             <li>
-              Top deals page with 15%+ deals <FaAngleRight className="angle-right large" />
+              <span>Top deals page with 15%+ deals</span> <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/top-deals">
                 Top Deals
               </Link>
             </li>
             <li>
-              Cart options - change item amount, delete, clear cart <FaAngleRight className="angle-right large" />
+              <span>Cart options - change item amount, delete, clear cart</span>{' '}
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/cart">
                 Cart
               </Link>
             </li>
             <li>
-              3 carousels on homepage <FaAngleRight className="angle-right large" />
+              <span>3 carousels on homepage</span> <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/">
                 Home
               </Link>
             </li>
             <li>
-              Filter dropdown on mobile <FaAngleRight className="angle-right large" />
+              <span>Filter dropdown on mobile </span>
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products">
                 Products
               </Link>
@@ -287,36 +290,42 @@ const AboutPage = () => {
                 Top Deals
               </Link>
             </li>
-            <li>Login using new username/password or through LinkedIn/Gmail</li>
             <li>
-              Checkout (after logging in) and complete your order with the test CC number{' '}
+              <span>Login using new username/password or through LinkedIn/Gmail</span>
+            </li>
+            <li>
+              <span>Checkout (after logging in) and complete your order with the test CC number</span>{' '}
               <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/checkout">
                 Checkout
               </Link>
             </li>
             <li>
-              Free shipping for orders more than 50%
+              <span>Free shipping for orders more than 50%</span>
               <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/checkout">
                 Checkout
               </Link>
             </li>
             <li>
-              Fill out the form on the homepage and I'll receive an email <FaAngleRight className="angle-right large" />
+              <span>Fill out the form on the homepage and I'll receive an email</span>{' '}
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/">
                 Home
               </Link>
             </li>
-            <li>Scroll top arrow for longer pages </li>
             <li>
-              Gallery modal popup on single product pages (desktop only) <FaAngleRight className="angle-right large" />
+              <span>Scroll top arrow for longer pages (check the bottom of this page)</span>{' '}
+            </li>
+            <li>
+              <span>Gallery modal popup on single product pages (desktop only)</span>{' '}
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products/mens-shirts/52">
                 Single Product
               </Link>
             </li>
             <li>
-              Animation on scroll on home and about page <FaAngleRight className="angle-right large" />
+              <span>Animation on scroll on home and about page</span> <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/">
                 Home
               </Link>{' '}
@@ -414,12 +423,13 @@ const Wrapper = styled.section`
     }
 
     &.list-item {
-      padding-left: 20px;
+      padding-left: 0;
       li {
-        display: list-item;
-        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #ccc;
         display: flex;
-        a {
+        align-items: center;
+        a.btn {
           width: auto;
           margin-left: 10px;
         }
