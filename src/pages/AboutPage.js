@@ -430,7 +430,7 @@ const Wrapper = styled.section`
     width: 800px;
     margin: auto;
     padding-bottom: 1rem;
-    max-width: 100vw;
+    max-width: calc(100vw - 40px);
   }
   ul.normal-list {
     list-style-type: disc;
