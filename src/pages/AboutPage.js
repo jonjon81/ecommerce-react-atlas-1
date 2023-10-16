@@ -460,7 +460,8 @@ const Wrapper = styled.section`
           width: 50%;
           @media (max-width: 800px) {
             width: 200px;
-            max-width: 40%;
+            width: 40%;
+            font-size: 1rem;
           }
         }
         div {
