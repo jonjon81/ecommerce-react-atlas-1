@@ -24,6 +24,7 @@ import {
   FaGithubAlt,
   FaNpm,
   FaDatabase,
+  FaFonticonsFi,
 } from 'react-icons/fa';
 import { BsFiletypeJson } from 'react-icons/bs';
 import { GiHook, GiMatterStates } from 'react-icons/gi';
@@ -219,9 +220,9 @@ const AboutPage = () => {
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" className="btn" href="https://www.npmjs.com/package/framer-motion">
-                <PiFramerLogoFill />
-                <span>Add here</span>
+              <a target="_blank" rel="noreferrer" className="btn" href="https://favicon.io/favicon-generator/">
+                <FaFonticonsFi />
+                <span>Custom Favicon</span>
               </a>
             </li>
           </ul>
