@@ -33,6 +33,10 @@ import { SiStylelint, SiVite } from 'react-icons/si';
 
 import { Link } from 'react-router-dom';
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
+
 const AboutPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -238,19 +242,86 @@ const AboutPage = () => {
             }}
             className="normal-list list-item"
           >
-            <li>Filter product data in many ways</li>
-            <li>Search product names</li>
-            <li>Top deals page with 15%+ deals</li>
-            <li>Cart options - change item amount, delete, clear cart</li>
-            <li>3 carousels on homepage</li>
-            <li>Filter dropdown on mobile</li>
+            <li>
+              Filter product data in many ways{' '}
+              <Link onClick={scrollTop} className="btn" to="/products">
+                Products
+              </Link>
+              <Link onClick={scrollTop} className="btn" to="/top-deals">
+                Top Deals
+              </Link>
+            </li>
+            <li>
+              Search product names{' '}
+              <Link onClick={scrollTop} className="btn" to="/products">
+                Products
+              </Link>
+              <Link onClick={scrollTop} className="btn" to="/top-deals">
+                Top Deals
+              </Link>
+            </li>
+            <li>
+              Top deals page with 15%+ deals{' '}
+              <Link onClick={scrollTop} className="btn" to="/top-deals">
+                Top Deals
+              </Link>
+            </li>
+            <li>
+              Cart options - change item amount, delete, clear cart{' '}
+              <Link onClick={scrollTop} className="btn" to="/cart">
+                Cart
+              </Link>
+            </li>
+            <li>
+              3 carousels on homepage{' '}
+              <Link onClick={scrollTop} className="btn" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              Filter dropdown on mobile{' '}
+              <Link onClick={scrollTop} className="btn" to="/products">
+                Products
+              </Link>
+              <Link onClick={scrollTop} className="btn" to="/top-deals">
+                Top Deals
+              </Link>
+            </li>
             <li>Login using new username/password or through LinkedIn/Gmail</li>
-            <li>Checkout (after logging in) and complete your order with the test CC number</li>
-            <li>Free shipping for orders more than 50%</li>
-            <li>Fill out the form on the homepage and I'll receive an email</li>
-            <li>Scroll top arrow for longer pages</li>
-            <li>Gallery modal popup on single product pages</li>
-            <li>Animation on scroll on home and about page</li>
+            <li>
+              Checkout (after logging in) and complete your order with the test CC number{' '}
+              <Link onClick={scrollTop} className="btn" to="/checkout">
+                Checkout
+              </Link>
+            </li>
+            <li>
+              Free shipping for orders more than 50%
+              <Link onClick={scrollTop} className="btn" to="/checkout">
+                Checkout
+              </Link>
+            </li>
+            <li>
+              Fill out the form on the homepage and I'll receive an email{' '}
+              <Link onClick={scrollTop} className="btn" to="/">
+                Home
+              </Link>
+            </li>
+            <li>Scroll top arrow for longer pages </li>
+            <li>
+              Gallery modal popup on single product pages (desktop only){' '}
+              <Link onClick={scrollTop} className="btn" to="/products/mens-shirts/52">
+                Single Product
+              </Link>
+            </li>
+            <li>
+              Animation on scroll on home and about page{' '}
+              <Link onClick={scrollTop} className="btn" to="/">
+                Home
+              </Link>{' '}
+              <Link onClick={scrollTop} className="btn" to="/about">
+                About
+              </Link>
+            </li>
           </ul>
         </article>
       </Wrapper>
@@ -344,6 +415,10 @@ const Wrapper = styled.section`
       padding-left: 20px;
       li {
         display: list-item;
+        a {
+          width: auto;
+          margin-left: 10px;
+        }
       }
     }
 
