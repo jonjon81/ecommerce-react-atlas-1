@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
 import Category from './Category';
-import Hidden from './Hidden';
-const categoryList = [];
 
 const CategoryProducts = () => {
   const { products_loading: loading, products_error: error, featured_products: category } = useProductsContext();
@@ -16,6 +14,8 @@ const CategoryProducts = () => {
     return <Error />;
   }
 
+  const every_nth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
+
   return (
     <Wrapper className="section">
       <div className="title">
@@ -23,13 +23,8 @@ const CategoryProducts = () => {
         <div className="underline"></div>
       </div>
       <div className="section-center category">
-        {category.map((product) => {
-          if (categoryList.includes(product.category)) {
-            return <Hidden key={product.id} />;
-          } else {
-            categoryList.push(product.category);
-            return <Category key={product.id} {...product} />;
-          }
+        {every_nth(category, 5).map((item) => {
+          return <Category key={item.id} {...item} />;
         })}
       </div>
     </Wrapper>
