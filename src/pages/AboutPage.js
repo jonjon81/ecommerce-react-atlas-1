@@ -243,7 +243,7 @@ const AboutPage = () => {
             className="normal-list list-item"
           >
             <li>
-              Filter product data in many ways{' '}
+              Filter product data in many ways <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products">
                 Products
               </Link>
@@ -252,7 +252,7 @@ const AboutPage = () => {
               </Link>
             </li>
             <li>
-              Search product names{' '}
+              Search product names <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products">
                 Products
               </Link>
@@ -261,25 +261,25 @@ const AboutPage = () => {
               </Link>
             </li>
             <li>
-              Top deals page with 15%+ deals{' '}
+              Top deals page with 15%+ deals <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/top-deals">
                 Top Deals
               </Link>
             </li>
             <li>
-              Cart options - change item amount, delete, clear cart{' '}
+              Cart options - change item amount, delete, clear cart <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/cart">
                 Cart
               </Link>
             </li>
             <li>
-              3 carousels on homepage{' '}
+              3 carousels on homepage <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/">
                 Home
               </Link>
             </li>
             <li>
-              Filter dropdown on mobile{' '}
+              Filter dropdown on mobile <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products">
                 Products
               </Link>
@@ -290,31 +290,33 @@ const AboutPage = () => {
             <li>Login using new username/password or through LinkedIn/Gmail</li>
             <li>
               Checkout (after logging in) and complete your order with the test CC number{' '}
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/checkout">
                 Checkout
               </Link>
             </li>
             <li>
               Free shipping for orders more than 50%
+              <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/checkout">
                 Checkout
               </Link>
             </li>
             <li>
-              Fill out the form on the homepage and I'll receive an email{' '}
+              Fill out the form on the homepage and I'll receive an email <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/">
                 Home
               </Link>
             </li>
             <li>Scroll top arrow for longer pages </li>
             <li>
-              Gallery modal popup on single product pages (desktop only){' '}
+              Gallery modal popup on single product pages (desktop only) <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/products/mens-shirts/52">
                 Single Product
               </Link>
             </li>
             <li>
-              Animation on scroll on home and about page{' '}
+              Animation on scroll on home and about page <FaAngleRight className="angle-right large" />
               <Link onClick={scrollTop} className="btn" to="/">
                 Home
               </Link>{' '}
@@ -415,6 +417,8 @@ const Wrapper = styled.section`
       padding-left: 20px;
       li {
         display: list-item;
+        align-items: center;
+        display: flex;
         a {
           width: auto;
           margin-left: 10px;
