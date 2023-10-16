@@ -18,8 +18,19 @@ const Filters = () => {
     setActive(!isActive);
   };
 
+  let searchValue = document.querySelector('.-search-bar input');
+  let clearButton = document.querySelector('.clearButton');
+  if (searchValue) {
+    if (searchValue.defaultValue.length > 0) {
+      clearButton.classList.add('active');
+    } else {
+      clearButton.classList.remove('active');
+    }
+  }
+
   const categories = getUniqueValues(all_products, 'category');
   const companies = getUniqueValues(all_products, 'brand');
+
   return (
     <Wrapper className="filter-wrapper">
       <div className="content">
@@ -36,6 +47,9 @@ const Filters = () => {
                 onChange={updateFilters}
                 className="search-input"
               />
+              <button className="clearButton" onClick={clearFilters}>
+                X
+              </button>
             </div>
             <button onClick={handleFilterToggle} className="-cog">
               <FaCog />
@@ -215,8 +229,20 @@ const Wrapper = styled.section`
     }
     .-search-bar {
       width: 200px;
+      display: flex;
       input {
         width: 100%;
+      }
+      .clearButton {
+        padding: 5px;
+        margin-left: -25px;
+        font-weight: bold;
+        display: none;
+        border: none;
+        &.active {
+          display: flex;
+          align-item: center;
+        }
       }
     }
     .control-container {

@@ -9,8 +9,6 @@ const ProductImages = ({ images = [[]] }) => {
   const imageModalActive = () => {
     vpWidth = window.innerWidth;
     if (vpWidth > 992) {
-      console.log('vpwidth');
-      console.log(vpWidth);
       setIsActive(true);
       modalBg.classList.add('active');
     }
