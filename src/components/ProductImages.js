@@ -71,6 +71,7 @@ const Wrapper = styled.section`
     }
     .main {
       height: 60vh;
+      cursor: auto;
     }
     .gallery {
       margin-top: 40px;
@@ -117,6 +118,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     .main {
       height: 500px;
+      cursor: pointer;
     }
     .gallery {
       img {
