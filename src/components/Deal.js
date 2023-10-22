@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
 import { discountPercent, discountedPrice, scrollTop } from '../utils/helpers';
-import {} from '../utils/helpers';
 import { FaSistrix } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const Deal = ({ thumbnail, title, price, id, category, discountPercentage }) => {
