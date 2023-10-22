@@ -1,4 +1,0 @@
-.scaffold-finite-scroll__content ul li:nth-child(4n + 5) {
-  border: 5px solid red !important;
-  background: lightblue;
-}
