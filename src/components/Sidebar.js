@@ -181,7 +181,7 @@ const SidebarContainer = styled.div`
     margin: 2rem auto;
   }
   ul.sublinks {
-    background: var(--clr-primary-3);
+    background: var(--clr-primary-0);
     width: 100%;
     z-index: 1;
     position: absolute;
