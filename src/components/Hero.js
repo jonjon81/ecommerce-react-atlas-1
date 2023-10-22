@@ -5,16 +5,13 @@ import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { scrollTop } from '../utils/helpers';
 
 import main from '../assets/categories/main.jpeg';
 import sunglasses from '../assets/categories/sunglasses.jpg';
 import furniture from '../assets/categories/furniture.jpg';
 import watches from '../assets/categories/watches.jpg';
 import motorcycle from '../assets/categories/motorcycle.jpg';
-
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-};
 
 const Hero = () => {
   var settings = {

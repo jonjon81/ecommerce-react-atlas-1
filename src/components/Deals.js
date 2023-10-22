@@ -5,15 +5,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Link } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { scrollTop } from '../utils/helpers';
 
 import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
 import Deal from './Deal';
-
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-};
 
 const Deals = () => {
   const { products_loading: loading, products_error: error, featured_products: featured } = useProductsContext();

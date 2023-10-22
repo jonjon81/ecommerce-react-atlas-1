@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import CartButtons from './CartButtons';
 import { useUserContext } from '../context/user_context';
 import { useFilterContext } from '../context/filter_context';
+import { scrollTop } from '../utils/helpers';
 
 const Sidebar = () => {
   const [isActive, setActive] = useState('false');
@@ -24,7 +25,7 @@ const Sidebar = () => {
   function mainMenuFunction() {
     clearFilters();
     closeSidebar();
-    window.scrollTo(0, 0);
+    scrollTop();
   }
 
   function subMenuFunction() {

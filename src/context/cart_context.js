@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useReducer } from 'react';
 import reducer from '../reducers/cart_reducer';
 import { ADD_TO_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT, CLEAR_CART, COUNT_CART_TOTALS } from '../actions';
+import { scrollTop } from '../utils/helpers';
 
 const getLocalStorage = () => {
   let cart = localStorage.getItem('cart');
@@ -25,7 +26,7 @@ export const CartProvider = ({ children }) => {
   // add to cart
   const addToCart = (id, amount, product) => {
     dispatch({ type: ADD_TO_CART, payload: { id, amount, product } });
-    window.scrollTo(0, 0);
+    scrollTop();
   };
   // remove item
   const removeItem = (id) => {

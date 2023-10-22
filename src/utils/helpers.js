@@ -22,3 +22,7 @@ export const getUniqueValues = (data, type) => {
 
   return ['all', ...new Set(unique)];
 };
+
+export const scrollTop = () => {
+  window.scrollTo(0, 0);
+};

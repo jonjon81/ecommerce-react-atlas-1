@@ -8,6 +8,8 @@ import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
 import Product from './Product';
+import { scrollTop } from '../utils/helpers';
+
 const FeaturedProducts = () => {
   const { products_loading: loading, products_error: error, featured_products: featured } = useProductsContext();
   if (loading) {
@@ -52,10 +54,6 @@ const FeaturedProducts = () => {
         },
       },
     ],
-  };
-
-  const scrollTop = () => {
-    window.scrollTo(0, 0);
   };
 
   return (

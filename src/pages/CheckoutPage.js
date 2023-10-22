@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PageHero, StripeCheckout } from '../components';
-
-// extra imports
-
+import { scrollTop } from '../utils/helpers';
 import { useCartContext } from '../context/cart_context';
 import { Link } from 'react-router-dom';
-
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-};
 
 const CheckoutPage = () => {
   const { cart } = useCartContext();

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
-import { formatPrice } from '../utils/helpers';
-import { discountedPrice } from '../utils/helpers';
+import { formatPrice, discountedPrice, scrollTop } from '../utils/helpers';
+import {} from '../utils/helpers';
 import { Loading, Error, ProductImages, Rating, PageHero, AddToCart } from '../components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -16,10 +16,6 @@ const SingleProductPage = () => {
     single_product: product,
     fetchSingleProduct,
   } = useProductsContext();
-
-  const scrollTop = () => {
-    window.scrollTo(0, 0);
-  };
 
   useEffect(() => {
     fetchSingleProduct(`${url}/${id}`);

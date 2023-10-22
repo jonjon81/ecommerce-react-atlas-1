@@ -30,12 +30,9 @@ import { BsFiletypeJson } from 'react-icons/bs';
 import { GiHook, GiMatterStates } from 'react-icons/gi';
 import { PiFramerLogoFill } from 'react-icons/pi';
 import { SiStylelint, SiVite } from 'react-icons/si';
+import { scrollTop } from '../utils/helpers';
 
 import { Link } from 'react-router-dom';
-
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-};
 
 const AboutPage = () => {
   const ref = useRef(null);
