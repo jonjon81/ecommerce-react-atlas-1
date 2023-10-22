@@ -31,7 +31,6 @@ import { GiHook, GiMatterStates } from 'react-icons/gi';
 import { PiFramerLogoFill } from 'react-icons/pi';
 import { SiStylelint, SiVite } from 'react-icons/si';
 import { scrollTop } from '../utils/helpers';
-
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
@@ -299,7 +298,7 @@ const AboutPage = () => {
               </div>
             </li>
             <li>
-              <span>Login using new username/password or through LinkedIn/Gmail</span>
+              <span className="-width-100">Login using new username/password or through LinkedIn/Gmail</span>
             </li>
             <li>
               <span>Checkout (after logging in) and complete your order with the test CC number</span>{' '}
@@ -329,7 +328,7 @@ const AboutPage = () => {
               </Link>
             </li>
             <li>
-              <span>Scroll top arrow for longer pages (check the bottom of this page)</span>{' '}
+              <span className="-width-100">Scroll top arrow for longer pages (check the bottom of this page)</span>{' '}
             </li>
             <li>
               <span>Gallery modal popup on single product pages (desktop only)</span>{' '}
@@ -453,7 +452,7 @@ const Wrapper = styled.section`
       padding-left: 0;
       width: 800px;
       margin: auto;
-      max-width: 100vw;
+      max-width: calc(100vw - 40px);
       li {
         padding: 1rem 0;
         border-bottom: 1px solid #ccc;
@@ -461,6 +460,9 @@ const Wrapper = styled.section`
         align-items: center;
         span {
           width: 50%;
+          &.-width-100 {
+            width: 100%;
+          }
           @media (max-width: 800px) {
             width: 200px;
             width: 40%;
