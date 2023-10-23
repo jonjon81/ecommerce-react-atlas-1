@@ -66,6 +66,20 @@ Variables
   color: #cf0000;
 }
 
+#root .linkedin-color {
+  color: #0a66c2;
+}
+
+#root .mail-color {
+  color: #b10100;
+}
+
+#root .pdf-color {
+  color: #990000;
+}
+#root .msword-color {
+  color: #2a5495;
+}
 #root .tech-icon:hover {
   color: #000;
 }

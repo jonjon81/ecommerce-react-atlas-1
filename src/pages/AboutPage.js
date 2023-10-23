@@ -4,9 +4,10 @@ import { PageHero } from '../components';
 import { useInView } from 'framer-motion';
 import laptops from '../assets/categories/laptops.jpeg';
 import {
-  FaMailBulk,
+  FaEnvelope,
   FaLinkedin,
-  FaFileCsv,
+  FaFileWord,
+  FaFilePdf,
   FaReact,
   FaCss3,
   FaHtml5,
@@ -61,17 +62,20 @@ const AboutPage = () => {
                 <strong>Contact</strong>
                 <FaAngleRight className="angle-right large" />
                 <a target="_blank" rel="noreferrer" href="mailto:jsa@jonatlas.com">
-                  <FaMailBulk />
+                  <FaEnvelope className="mail-color tech-icon" />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonatlas">
-                  <FaLinkedin />
+                  <FaLinkedin className="linkedin-color tech-icon" />
                 </a>
               </p>
               <p className="contact">
                 <strong>Resume</strong>
                 <FaAngleRight className="angle-right large" />
+                <Link to="/files/jon-atlas-resume-FED.pdf" target="_blank" download>
+                  <FaFilePdf className="pdf-color tech-icon" />
+                </Link>
                 <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
-                  <FaFileCsv />
+                  <FaFileWord className="msword-color tech-icon" />
                 </Link>
               </p>
             </div>
