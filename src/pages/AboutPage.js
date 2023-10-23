@@ -4,7 +4,7 @@ import { PageHero } from '../components';
 import { useInView } from 'framer-motion';
 import laptops from '../assets/categories/laptops.jpeg';
 import {
-  FaEnvelope,
+  FaEnvelopeSquare,
   FaLinkedin,
   FaFileWord,
   FaFilePdf,
@@ -62,7 +62,7 @@ const AboutPage = () => {
                 <strong>Contact</strong>
                 <FaAngleRight className="angle-right large" />
                 <a target="_blank" rel="noreferrer" href="mailto:jsa@jonatlas.com">
-                  <FaEnvelope className="mail-color tech-icon" />
+                  <FaEnvelopeSquare className="mail-color tech-icon" />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonatlas">
                   <FaLinkedin className="linkedin-color tech-icon" />
