@@ -71,10 +71,10 @@ const AboutPage = () => {
               <p className="contact">
                 <strong>Resume</strong>
                 <FaAngleRight className="angle-right large" />
-                <Link to="/files/jon-atlas-resume-FED.pdf" target="_blank" download>
+                <Link to="/files/Jon-Atlas-Resume-Senior-FED.pdf" target="_blank" download>
                   <FaFilePdf className="pdf-color tech-icon" />
                 </Link>
-                <Link to="/files/jon-atlas-resume-FED.docx" target="_blank" download>
+                <Link to="/files/Jon-Atlas-Resume-Senior-FED.docx" target="_blank" download>
                   <FaFileWord className="msword-color tech-icon" />
                 </Link>
               </p>
