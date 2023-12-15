@@ -74,7 +74,7 @@ const AboutPage = () => {
                 <Link to="/files/Jon-Atlas-Resume-Senior-FED.pdf" target="_blank" download>
                   <FaFilePdf className="pdf-color tech-icon" />
                 </Link>
-                <Link to="/files/Jon-Atlas-Resume-Senior-FED.docx" target="_blank" download>
+                <Link to="/files/Jon-Atlas-Resume-Senior-FED-1.docx" target="_blank" download>
                   <FaFileWord className="msword-color tech-icon" />
                 </Link>
               </p>
